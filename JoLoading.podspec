@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JoLoading'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of JoLoading.'
+  s.version          = '0.1.1'
+  s.summary          = '简易的协议为UIViewController添加 loading 层'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

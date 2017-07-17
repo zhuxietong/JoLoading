@@ -50,47 +50,47 @@ extension UIButton{
 extension JoLoading {
     
     //Appearance
-    public dynamic var buttonColor: UIColor {
+    @objc public dynamic var buttonColor: UIColor {
         get {
             return button.buttonColor
         }
         set { button.buttonColor = newValue }
     }
-    public dynamic var buttonFont: UIFont {
+    @objc public dynamic var buttonFont: UIFont {
         get {
             return button.titleLabel?.font ?? UIFont.systemFont(ofSize: 15)
         }
         set {button.titleLabel?.font = newValue}
     }
     
-    public dynamic var buttonTitleColor: UIColor {
+    @objc public dynamic var buttonTitleColor: UIColor {
         get {
             return button.titleColor(for: .normal) ?? .white
         }
         set { button.setTitleColor(newValue, for: .normal) }
     }
     
-    public dynamic var titleColor: UIColor {
+    @objc public dynamic var titleColor: UIColor {
         get {
             return titleL.textColor ?? .darkText
         }
         set { titleL.textColor = newValue }
     }
     
-    public dynamic var titleFont: UIFont {
+    @objc public dynamic var titleFont: UIFont {
         get {
             return titleL.font
         }
         set { titleL.font = newValue }
     }
     
-    public dynamic var messageColor: UIColor {
+    @objc public var messageColor: UIColor {
         get {
             return infoL.textColor ?? .darkText
         }
         set { infoL.textColor = newValue }
     }
-    public dynamic var messageFont: UIFont {
+    @objc public var messageFont: UIFont {
         get {
             return infoL.font
         }
