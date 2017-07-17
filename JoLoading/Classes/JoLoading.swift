@@ -81,7 +81,7 @@ open class JoLoading: UIView {
     
     open var handBlock:()->Void = {
         
-        print("press with")
+        print("press with block")
     }
     
     
@@ -279,8 +279,6 @@ open class JoLoading: UIView {
         if animated
         {
 //            weak var wself = self
-
-
             UIView.animate(withDuration: 0.34, animations: { () -> Void in
                 self.alpha = 0.0
             }) { (finish:Bool) -> Void in
