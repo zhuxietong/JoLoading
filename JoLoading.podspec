@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JoLoading'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '简易的协议为UIViewController添加 loading 层'
 
 # This description is used to generate tags and improve search results.
@@ -39,6 +39,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'Eelay', '~> 1.0.0'
+  s.dependency 'Eelay'
 
 end
