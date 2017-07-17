@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JoLoading_Example' do
+  pod 'JoLoading', :path => '../'
+
+  target 'JoLoading_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
