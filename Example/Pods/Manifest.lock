@@ -1,0 +1,19 @@
+PODS:
+  - Eelay (1.0.0)
+  - JoLoading (0.1.0):
+    - Eelay (~> 1.0.0)
+
+DEPENDENCIES:
+  - JoLoading (from `../`)
+
+EXTERNAL SOURCES:
+  JoLoading:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Eelay: 9bfafb64b9f643fe38f8fdfa2e1fb0425e8dcfd1
+  JoLoading: c406b8f4108f1dbda6bffabac0f2864cb0c71771
+
+PODFILE CHECKSUM: 5ccf3e5c4a536e716e56bf5fa2c664472c444537
+
+COCOAPODS: 1.2.1

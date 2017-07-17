@@ -28,9 +28,9 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/zhuxietong/JoLoading.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'JoLoading/Classes/**/*'
+  s.source_files = 'JoLoading/Classes/**/*','JoLoading/Classes/*'
   
   # s.resource_bundles = {
   #   'JoLoading' => ['JoLoading/Assets/*.png']
@@ -39,4 +39,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Eelay', '~> 1.0.0'
+
 end
