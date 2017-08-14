@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JoLoading'
-  s.version          = '0.1.2'
+  s.version          = '0.1.4'
   s.summary          = '简易的协议为UIViewController添加 loading 层'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/zhuxietong/JoLoading.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'JoLoading/Classes/**/*','JoLoading/Classes/*'
   

@@ -15,27 +15,22 @@ public extension JoLoading
 {
     private struct Message{
         
-        static var load_failed    = "数据加载是失败请稍候再试"
+        static var load_failed  = "数据加载是失败请稍候再试"
         
-        static var link_failed    = "链接失败请稍候再试"
+        static var link_failed  = "链接失败请稍候再试"
         
-        static var app_tag    = ""
+        static var app_tag  = ""
     }
     
     public func loading()
     {
         self.loading(message: "数据加载中", title: Message.app_tag)
-
-        
     }
-    
-    
     
     public func failed()
     {
 
         self.titleL.textColor = UIColor.darkText
-        
         self.show(message: Message.app_tag, title: Message.load_failed)
     }
 }
@@ -47,8 +42,6 @@ public var DefaultLoading = JoLoading.self
 
 
 open class JoLoading: UIView {
-        
-    //    var delegate:MELoadingViewDelegate?
     
     public lazy var titleL:UILabel = {
         let lable = UILabel()
@@ -76,22 +69,18 @@ open class JoLoading: UIView {
     }()
 
     
+    public weak var containerController:UIViewController? = nil
+
     public var showing = false
     
-    
     open var handBlock:()->Void = {
-        
         print("press with block")
     }
-    
     
     required public init() {
         super.init(frame: .zero)
         self.addLayoutRules()
-        
     }
-    
-    
     
     required public init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -109,26 +98,18 @@ open class JoLoading: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         titleL.numberOfLines = 1
-//        titleL.textColor = UIColor(white: 0.2, alpha: 1.0)
-//        titleL.font = UIFont.systemFont(ofSize: 20)
         titleL.textAlignment = NSTextAlignment.center
         
         infoL.numberOfLines = 5
-//        infoL.textColor = UIColor(white: 0.3, alpha: 1.0)
-//        infoL.font = UIFont.systemFont(ofSize: 17)
         infoL.textAlignment = NSTextAlignment.center
         
-        
         indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        
-        
-        
+                
         self.addSubview(titleL)
         self.addSubview(imageV)
         self.addSubview(infoL)
         self.addSubview(indicator)
         self.addSubview(button)
-        
         
         
         
@@ -278,11 +259,11 @@ open class JoLoading: UIView {
         
         if animated
         {
-//            weak var wself = self
+            weak var wself = self
             UIView.animate(withDuration: 0.34, animations: { () -> Void in
-                self.alpha = 0.0
+                wself?.alpha = 0.0
             }) { (finish:Bool) -> Void in
-                self.showing = false
+                wself?.showing = false
             }
         }
         else

@@ -215,12 +215,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = X5EKD9AZWG;
+						DevelopmentTeam = ZFFQWZTGDK;
 						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = PD9ZA48KDC;
+						DevelopmentTeam = ZFFQWZTGDK;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -498,9 +498,9 @@
 			baseConfigurationReference = 8E85A95B674A572718CF7EDD /* Pods-JoLoading_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X5EKD9AZWG;
+				DEVELOPMENT_TEAM = ZFFQWZTGDK;
 				INFOPLIST_FILE = JoLoading/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuxietong.loading;
@@ -514,9 +514,9 @@
 			baseConfigurationReference = EC984B2C45B35D01ADC08808 /* Pods-JoLoading_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = X5EKD9AZWG;
+				DEVELOPMENT_TEAM = ZFFQWZTGDK;
 				INFOPLIST_FILE = JoLoading/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhuxietong.loading;
@@ -529,7 +529,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 063AD4ADDDFF9A64BE2FAF74 /* Pods-JoLoading_Tests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = PD9ZA48KDC;
+				DEVELOPMENT_TEAM = ZFFQWZTGDK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -550,7 +550,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 68EBE43654A0D740BE7746EB /* Pods-JoLoading_Tests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = PD9ZA48KDC;
+				DEVELOPMENT_TEAM = ZFFQWZTGDK;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

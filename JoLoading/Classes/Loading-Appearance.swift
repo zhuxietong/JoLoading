@@ -1,15 +1,9 @@
-//
 //  Loading-Appearance.swift
 //  JoLoading
 //
 //  Created by tong on 2017/7/17.
-//
 
 import UIKit
-
-class Loading_Appearance: NSObject {
-
-}
 
 
 extension UIImage{
@@ -29,7 +23,6 @@ extension UIButton{
     private struct JoLoadingKey {
         static var btColor = "btColor_key"
     }
-    
     public var buttonColor: UIColor {
         get {
             if let obj = objc_getAssociatedObject(self, &JoLoadingKey.btColor) as? UIColor
@@ -67,6 +60,7 @@ extension JoLoading {
         get {
             return button.titleColor(for: .normal) ?? .white
         }
+        
         set { button.setTitleColor(newValue, for: .normal) }
     }
     

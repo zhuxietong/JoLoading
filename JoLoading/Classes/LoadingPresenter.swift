@@ -20,6 +20,7 @@ public protocol LoadingPresenter{
     var loadingV: JoLoading {get set}
     
     var jo_contentView: UIView {get}
+    
 
 }
 private let loadingTag = 18765
@@ -38,15 +39,20 @@ public extension LoadingPresenter where Self:UIViewController
         }
     }
     
+    
+ 
+    // MARK: loading view
     public var loadingV:JoLoading{
         get{
             
             if let loadI = self.view.viewWithTag(loadingTag) as? JoLoading
             {
+                loadI.containerController = self
                 return loadI
             }
             createLoadView()
             let v = self.view.viewWithTag(loadingTag) as! JoLoading
+            v.containerController = self
             return v
         }
         set{

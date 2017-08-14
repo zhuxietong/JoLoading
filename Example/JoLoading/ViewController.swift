@@ -13,17 +13,20 @@ import Eelay
 
 class ViewController: UIViewController,LoadingPresenter {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let contentV = UIView()
         jo_contentView.eelay = [
             [contentV,[ee.X.Y],"100",100],
         ]
+        
         contentV.backgroundColor = .brown
+        
     }
     
+    
     @IBAction func start(_ sender: UIBarButtonItem) {
+        
         loadingV.loading()
     }
     @IBAction func hiddenLoading(_ sender: Any) {
