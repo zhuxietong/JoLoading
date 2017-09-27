@@ -1,0 +1,6 @@
+framework module Eelay {
+  umbrella header "Eelay-umbrella.h"
+
+  export *
+  module * { export * }
+}

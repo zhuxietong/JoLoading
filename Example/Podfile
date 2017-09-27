@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'JoLoading_Example' do
+  pod 'JoLoading', :path => '../'
+end
