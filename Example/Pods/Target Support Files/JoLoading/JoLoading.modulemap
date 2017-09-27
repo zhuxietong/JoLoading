@@ -1,6 +1,0 @@
-framework module JoLoading {
-  umbrella header "JoLoading-umbrella.h"
-
-  export *
-  module * { export * }
-}
