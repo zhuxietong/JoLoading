@@ -15,6 +15,8 @@ public var LoadingPresenterDefautLoadingClass:JoLoading.Type = JoLoading.self
 
 public protocol LoadingPresenter{
     
+    var LoadingPresenterBg:UIView{get}
+    
     var LoadingClass:JoLoading.Type {get}
     
     var loadingV: JoLoading {get set}
@@ -30,7 +32,10 @@ private let contentTag = 18764
 public extension LoadingPresenter where Self:UIViewController
 {
 
-    
+    public var LoadingPresenterBg:UIView{get{
+        return self.view
+        }}
+
     
     public var LoadingClass:JoLoading.Type{
         get{
@@ -41,20 +46,20 @@ public extension LoadingPresenter where Self:UIViewController
     public var loadingV:JoLoading{
         get{
             
-            if let loadI = self.view.viewWithTag(loadingTag) as? JoLoading
+            if let loadI = self.LoadingPresenterBg.viewWithTag(loadingTag) as? JoLoading
             {
                 return loadI
             }
             createLoadView()
-            let v = self.view.viewWithTag(loadingTag) as! JoLoading
+            let v = self.LoadingPresenterBg.viewWithTag(loadingTag) as! JoLoading
             return v
         }
         set{
-            self.view.viewWithTag(loadingTag)?.removeFromSuperview()
+            self.LoadingPresenterBg.viewWithTag(loadingTag)?.removeFromSuperview()
             let loadV = newValue
             loadV.tag = loadingTag
-            view.insertSubview(loadV, aboveSubview: jo_contentView)
-            view.eelay = [
+            LoadingPresenterBg.insertSubview(loadV, aboveSubview: jo_contentView)
+            LoadingPresenterBg.eelay = [
                 [loadV,[ee.T.L.B.R]]
             ]
             loadV.dismiss(animated: false)
@@ -65,18 +70,18 @@ public extension LoadingPresenter where Self:UIViewController
     public var jo_contentView:UIView{
         get{
             
-            if let contentV = self.view.viewWithTag(contentTag)
+            if let contentV = self.LoadingPresenterBg.viewWithTag(contentTag)
             {
                 return contentV
             }
             createLoadView()
-            return self.view.viewWithTag(contentTag)!
+            return self.LoadingPresenterBg.viewWithTag(contentTag)!
         }
     }
 
 
     public func __insert_jo_contentView(_ contentV:UIView){
-        self.view.eelay = [
+        self.LoadingPresenterBg.eelay = [
             [contentV,[ee.T.L.B.R]],
         ]
     }
@@ -85,12 +90,12 @@ public extension LoadingPresenter where Self:UIViewController
         
 
         let contentV = UIView()
-        self.view.insertSubview(contentV, at: 0)
+        self.LoadingPresenterBg.insertSubview(contentV, at: 0)
         __insert_jo_contentView(contentV)
        
         let loadV = LoadingClass.init()
-        self.view.insertSubview(loadV, aboveSubview: contentV)
-        view.eelay = [
+        self.LoadingPresenterBg.insertSubview(loadV, aboveSubview: contentV)
+        LoadingPresenterBg.eelay = [
             [loadV,[ee.T.L.B.R,[0.&900,0.&900,0.&900,0.&900]]]
         ]
 
