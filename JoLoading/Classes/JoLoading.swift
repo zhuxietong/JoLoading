@@ -220,7 +220,7 @@ open class JoLoading: UIView {
         
         self.titleL.text = "\(title)"
         self.infoL.numberOfLines = 1
-        if message.characters.count > 1
+        if message.count > 1
         {
             self.infoL.text = ("        \(message)...")
         }

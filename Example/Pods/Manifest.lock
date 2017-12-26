@@ -1,7 +1,7 @@
 PODS:
-  - Eelay (4.0.0)
-  - JoLoading (4.0.0):
-    - Eelay (~> 4.0.0)
+  - Eelay (4.0.2)
+  - JoLoading (4.0.2):
+    - Eelay
 
 DEPENDENCIES:
   - JoLoading (from `../`)
@@ -11,8 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Eelay: e84ccf96a1fc2e4dbee91cf026efad271274f5ce
-  JoLoading: 23943b42530f48fff3f2f1b5514a0682e1e6e7b8
+  Eelay: a237678154b7c42835ce35631f7d2ac5d1ba6acd
+  JoLoading: 9bafd0093e1fca1cc31500997b1f0b10978d892b
 
 PODFILE CHECKSUM: 9ceb28b80d9cedc84d759f3e1a94f0ccb906bb7c
 

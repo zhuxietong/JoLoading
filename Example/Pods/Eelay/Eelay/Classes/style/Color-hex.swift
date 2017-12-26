@@ -21,7 +21,13 @@ public extension String {
 //    }
     
     public func sub(from:Int,end:Int) -> String {
-        return String(self[self.characters.index(self.startIndex, offsetBy: from)..<self.characters.index(self.startIndex, offsetBy: end)])
+        let s = self.index(self.startIndex, offsetBy: from)
+        let e = self.index(self.startIndex, offsetBy: end)
+        
+        let subvalues = self[s..<e] // One-sided Slicing
+        return String(subvalues)
+        
+//        return String(self[self.characters.index(self.startIndex, offsetBy: from)..<self.characters.index(self.startIndex, offsetBy: end)])
     }
 }
 
@@ -44,7 +50,7 @@ public extension UIColor {
         let scanner = Scanner(string: hex)
         var hexValue: CUnsignedLongLong = 0
         if scanner.scanHexInt64(&hexValue) {
-            switch (hex.characters.count) {
+            switch (hex.count) {
             case 3:
                 red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
                 green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0

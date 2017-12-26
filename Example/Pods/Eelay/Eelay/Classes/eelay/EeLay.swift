@@ -86,6 +86,11 @@ public func .&<T>(value:T,p:Double) -> Any  {
         return ["=":value,"p":p]
     }
     
+    if value is CGFloat
+    {
+        return ["=":value,"p":p]
+    }
+
     
     return value
     
