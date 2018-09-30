@@ -12,7 +12,7 @@ import Foundation
 public extension Array
 {
     var mutable_array:NSMutableArray
-        {
+    {
         return (self as NSArray).mutable_array
     }
     
@@ -20,9 +20,9 @@ public extension Array
 
 
 public extension Dictionary
-{    
+{
     var mutable_dictionary:NSMutableDictionary
-        {
+    {
         return (self as NSDictionary).mutable_dictionary
     }
 }
@@ -94,3 +94,4 @@ public extension NSDictionary
         return mutable_d
     }
 }
+

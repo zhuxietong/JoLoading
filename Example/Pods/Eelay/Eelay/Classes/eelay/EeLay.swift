@@ -58,35 +58,25 @@ public prefix func .<<T>(value:T) -> [String:T]  {
 infix operator .&
 
 public func .&<T>(value:T,p:Double) -> Any  {
-    if var one = value as? [String:Int]{
-        one["p"] = Int(p)
+    if var one = value as? [String:NumberValue]
+    {
+        one["p"] = p.doubleValue
         return one
     }
-    if var one = value as? [String:Double]{
-        one["p"] = p
-        return one
-    }
-    
     if var one = value as? [String:String]{
         one["p"] = "\(p)"
         return one
     }
-    if value is Int
+    
+    if let num = value as? NumberValue
     {
-        return ["=":value,"p":Int(p)]
+        return ["=":num.doubleValue,"p":p]
     }
     
     if value is String
     {
         return ["=":value,"p":"\(p)"]
     }
-    
-    if value is Double
-    {
-        return ["=":value,"p":p]
-    }
-    
-    
     return value
     
 }
@@ -100,11 +90,10 @@ open class easy {
     
     static var priority:Float = 800
     
-    
     public class lay{
-        var value:NSLayoutAttribute
+        var value:NSLayoutConstraint.Attribute
         
-        init(v:NSLayoutAttribute){
+        init(v:NSLayoutConstraint.Attribute){
             self.value = v
         }
     }
@@ -112,7 +101,7 @@ open class easy {
     public class map{
         var values:[lay] = [lay]()
         
-        init(v:NSLayoutAttribute,p:Float=800){
+        init(v:NSLayoutConstraint.Attribute,p:Float=easy.priority){
             self.values.append(lay(v: v))
         }
         
@@ -157,37 +146,36 @@ open class easy {
     
     
     public static var T:easy.map{
-        return map(v: NSLayoutAttribute.top)
+        return map(v: NSLayoutConstraint.Attribute.top)
     }
     public static var B:easy.map{
-        return map(v: NSLayoutAttribute.bottom)
+        return map(v: NSLayoutConstraint.Attribute.bottom)
     }
     public static var L:easy.map{
-        return map(v: NSLayoutAttribute.left)
+        return map(v: NSLayoutConstraint.Attribute.left)
     }
     public static var R:easy.map{
-        return map(v: NSLayoutAttribute.right)
+        return map(v: NSLayoutConstraint.Attribute.right)
     }
     public static var X:easy.map{
-        return map(v: NSLayoutAttribute.centerX)
+        return map(v: NSLayoutConstraint.Attribute.centerX)
     }
     public static var Y:easy.map{
-        return map(v: NSLayoutAttribute.centerY)
+        return map(v: NSLayoutConstraint.Attribute.centerY)
     }
     
     
     public static var width:easy.map{
-        return map(v: NSLayoutAttribute.width)
+        return map(v: NSLayoutConstraint.Attribute.width)
     }
     
     public static var height:easy.map{
-        return map(v: NSLayoutAttribute.height)
+        return map(v: NSLayoutConstraint.Attribute.height)
     }
     
     public static var none:easy.map{
-        return map(v: NSLayoutAttribute.notAnAttribute)
+        return map(v: NSLayoutConstraint.Attribute.notAnAttribute)
     }
-    
 }
 
 
@@ -244,7 +232,6 @@ public extension UIView{
     public var eelay:TP.lays {
         set(newValue){
             let format = UIView.eeformat(lays: newValue)
-            //            print(format)
             _ = UIView.eelay(lays: format, at: self)
         }
         get{
@@ -293,28 +280,16 @@ public extension UIView{
                 }
                 
                 //宽度-------------------------------------------
-                if let width = lay as? Int //width
+                if let width = lay as? NumberValue
                 {
-                    new_one.append(width.&800)
+                    new_one.append(width.doubleValue.&Double(easy.priority))
                 }
-                if let width = lay as? Float //width
-                {
-                    new_one.append(width.&800)
-                }
-                if let width = lay as? Double //width
-                {
-                    new_one.append(width.&800)
-                }
-                if let width = lay as? CGFloat //width
-                {
-                    new_one.append(width.&800)
-                }
-                
                 
                 //高度-------------------------------------------
                 if let height = lay as? String //height
                 {
-                    new_one.append(height.&800)
+                    let ps = height.&Double(easy.priority)
+                    new_one.append(ps)
                 }
                 
                 
@@ -340,7 +315,7 @@ public extension UIView{
                                     new_values.append(value)
                                 }
                                 else{
-                                    new_values.append(one_value.&800)
+                                    new_values.append(one_value.&Double(easy.priority))
                                 }
                             }
                             new_list.append(new_values)
@@ -357,7 +332,7 @@ public extension UIView{
                         }
                         else
                         {
-                            new_list.append([constain.&800])
+                            new_list.append([constain.&Double(easy.priority)])
                         }
                     }
                     new_one.append(new_list)
@@ -416,14 +391,13 @@ public extension UIView{
                 
                 for one in item_lays
                 {
-                    
                     //宽度或高度-----------------------------------
                     if let dict = one as? [String:Any]
                     {
                         //----------------------------高度
                         if let height = dict as? [String:String]
                         {
-                            var relatedBy:NSLayoutRelation = .equal
+                            var relatedBy:NSLayoutConstraint.Relation = .equal
                             var value = "0"
                             
                             if height.keys.contains(">")
@@ -448,18 +422,19 @@ public extension UIView{
                                 priority = Float(height["p"]!)!
                             }
                             
-                            let c =  NSLayoutConstraint(item: t_view, attribute: NSLayoutAttribute.height, relatedBy: relatedBy, toItem: nil, attribute: NSLayoutAttribute.height, multiplier: 1, constant: value.cg_float)
+                            let c =  NSLayoutConstraint(item: t_view, attribute: .height, relatedBy: relatedBy, toItem: nil, attribute: .height, multiplier: 1, constant: value.cg_float)
                             
-                            c.priority = UILayoutPriority.init(priority)
+                            c.priority =  UILayoutPriority(rawValue: priority)
                             one_constains.append(c)
-                            t_view.superview!.addConstraint(c)
+                            t_view.superview?.addConstraint(c)
+                            
                             continue
                         }
                         else{
                             //----------------------------宽度
                             let width = dict
                             
-                            var relatedBy:NSLayoutRelation = .equal
+                            var relatedBy:NSLayoutConstraint.Relation = .equal
                             var value = "0"
                             
                             if width.keys.contains(">")
@@ -489,9 +464,9 @@ public extension UIView{
                             }
                             
                             
-                            let c =  NSLayoutConstraint(item: t_view, attribute: NSLayoutAttribute.width, relatedBy: relatedBy, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 1, constant: value.cg_float)
-                            c.priority = UILayoutPriority.init(priority)
-
+                            let c =  NSLayoutConstraint(item: t_view, attribute: NSLayoutConstraint.Attribute.width, relatedBy: relatedBy, toItem: nil, attribute: NSLayoutConstraint.Attribute.width, multiplier: 1, constant: value.cg_float)
+                            c.priority = UILayoutPriority(rawValue:priority)
+                            
                             one_constains.append(c)
                             t_view.superview?.addConstraint(c)
                             
@@ -538,7 +513,7 @@ public extension UIView{
                             for (i,lay0) in this_atr.values.enumerated()
                             {
                                 
-                                if lay0.value != NSLayoutAttribute.notAnAttribute
+                                if lay0.value != NSLayoutConstraint.Attribute.notAnAttribute
                                 {
                                     let lay1 = to_atr.values[i]
                                     
@@ -553,7 +528,7 @@ public extension UIView{
                                     else{}
                                     
                                     
-                                    var relatedBy:NSLayoutRelation = .equal
+                                    var relatedBy:NSLayoutConstraint.Relation = .equal
                                     var value = "0"
                                     if _v.keys.contains(">")
                                     {
@@ -586,7 +561,7 @@ public extension UIView{
                                     }
                                     
                                     let x =  NSLayoutConstraint(item: t_view, attribute: lay0.value, relatedBy: relatedBy, toItem: relate_v, attribute: lay1.value, multiplier: 1, constant: value.cg_float)
-                                    x.priority = UILayoutPriority.init(priority)
+                                    x.priority = UILayoutPriority(rawValue:priority)
                                     one_constains.append(x)
                                     t_view.superview!.addConstraint(x)
                                 }
@@ -612,6 +587,11 @@ public extension UIView{
         return (constrains,cons)
     }
 }
+
+
+
+
+
 
 
 

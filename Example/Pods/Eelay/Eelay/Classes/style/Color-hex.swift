@@ -12,16 +12,22 @@ import UIKit
 
 public extension String {
     
-//    subscript (index: Int) -> Character {
-//        return self[self.characters.index(self.startIndex, offsetBy: index)]
-//    }
-//
-//    subscript (range: Range<Int>) -> String {
-//        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)])
-//    }
+    //    subscript (index: Int) -> Character {
+    //        return self[self.characters.index(self.startIndex, offsetBy: index)]
+    //    }
+    //
+    //    subscript (range: Range<Int>) -> String {
+    //        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)])
+    //    }
     
     public func sub(from:Int,end:Int) -> String {
-        return String(self[self.characters.index(self.startIndex, offsetBy: from)..<self.characters.index(self.startIndex, offsetBy: end)])
+        let s = self.index(self.startIndex, offsetBy: from)
+        let e = self.index(self.startIndex, offsetBy: end)
+        
+        let subvalues = self[s..<e] // One-sided Slicing
+        return String(subvalues)
+        
+        //        return String(self[self.characters.index(self.startIndex, offsetBy: from)..<self.characters.index(self.startIndex, offsetBy: end)])
     }
 }
 
@@ -38,13 +44,13 @@ public extension UIColor {
             
             let index = hex.index(hex.startIndex, offsetBy: 1)
             hex = String(hex[index..<hex.endIndex])
- 
+            
         }
         
         let scanner = Scanner(string: hex)
         var hexValue: CUnsignedLongLong = 0
         if scanner.scanHexInt64(&hexValue) {
-            switch (hex.characters.count) {
+            switch (hex.count) {
             case 3:
                 red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
                 green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0
@@ -68,8 +74,9 @@ public extension UIColor {
                 //print("Invalid RGB string, number of characters after '#' should be either 3, 4, 6 or 8", terminator: "")
             }
         } else {
-//            print("Scan hex error")
+            //            print("Scan hex error")
         }
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
 }
+

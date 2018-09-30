@@ -8,7 +8,7 @@
 import UIKit
 
 class Loading_Appearance: NSObject {
-
+    
 }
 
 
@@ -42,7 +42,7 @@ extension UIButton{
         }
         set {
             objc_setAssociatedObject(self, &JoLoadingKey.btColor, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-            setBackgroundImage(UIImage.image(newValue), for: UIControlState.normal)
+            setBackgroundImage(UIImage.image(newValue), for: .normal)
         }
     }
 }
@@ -97,4 +97,5 @@ extension JoLoading {
         set { infoL.font = newValue }
     }
 }
+
 

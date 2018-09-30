@@ -25,7 +25,7 @@ public extension JoLoading
     public func loading()
     {
         self.loading(message: "数据加载中", title: Message.app_tag)
-
+        
         
     }
     
@@ -33,7 +33,7 @@ public extension JoLoading
     
     public func failed()
     {
-
+        
         self.titleL.textColor = UIColor.darkText
         
         self.show(message: Message.app_tag, title: Message.load_failed)
@@ -47,7 +47,7 @@ public var DefaultLoading = JoLoading.self
 
 
 open class JoLoading: UIView {
-        
+    
     //    var delegate:MELoadingViewDelegate?
     
     public lazy var titleL:UILabel = {
@@ -74,7 +74,7 @@ open class JoLoading: UIView {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         return button
     }()
-
+    
     
     public var showing = false
     
@@ -109,18 +109,14 @@ open class JoLoading: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         titleL.numberOfLines = 1
-//        titleL.textColor = UIColor(white: 0.2, alpha: 1.0)
-//        titleL.font = UIFont.systemFont(ofSize: 20)
+
         titleL.textAlignment = NSTextAlignment.center
         
         infoL.numberOfLines = 5
-//        infoL.textColor = UIColor(white: 0.3, alpha: 1.0)
-//        infoL.font = UIFont.systemFont(ofSize: 17)
+      
         infoL.textAlignment = NSTextAlignment.center
         
-        
-        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        
+        indicator.style = .gray
         
         
         self.addSubview(titleL)
@@ -135,50 +131,50 @@ open class JoLoading: UIView {
         let views = ["lable":infoL,"indicator":indicator,"button":button,"imageV":imageV,"titleL":titleL] as [String : Any];
         
         
-        self.addConstraint(NSLayoutConstraint(item: infoL, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: infoL, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0))
         
-        self.addConstraint(NSLayoutConstraint(item: infoL, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
-        
-        
-        
-        self.addConstraint(NSLayoutConstraint(item: indicator, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: infoL, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: infoL, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0))
         
         
         
-        self.addConstraint(NSLayoutConstraint(item: indicator, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: infoL, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: indicator, attribute: NSLayoutConstraint.Attribute.left, relatedBy: NSLayoutConstraint.Relation.equal, toItem: infoL, attribute: NSLayoutConstraint.Attribute.left, multiplier: 1, constant: 0))
         
         
-        let centerX = NSLayoutConstraint(item: infoL, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0)
+        
+        self.addConstraint(NSLayoutConstraint(item: indicator, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: infoL, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0))
+        
+        
+        let centerX = NSLayoutConstraint(item: infoL, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
         centerX.priority = UILayoutPriority.init(750)
         self.addConstraint(centerX)
         
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|->=20-[lable]->=20-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "|->=20-[lable]->=20-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|->=50-[lable]->=50-|", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        
-        
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[lable]-15-[button]", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[button(36)]", options: NSLayoutFormatOptions(), metrics: nil, views: views))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "[button(120)]", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|->=50-[lable]->=50-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
         
-        self.addConstraint(NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[lable]-15-[button]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        button.addTarget(self, action: #selector(JoLoading.handle as (JoLoading) -> () -> ()), for: UIControlEvents.touchUpInside)
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[button(36)]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "[button(120)]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        
+        
+        self.addConstraint(NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0))
+        
+        button.addTarget(self, action: #selector(JoLoading.handle as (JoLoading) -> () -> ()), for: UIControl.Event.touchUpInside)
         button.layer.cornerRadius = 5.0
         button.clipsToBounds = true
         button.tag = 1
         
         
         
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[imageV]-8-[lable]", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[imageV]-8-[lable]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        self.addConstraint(NSLayoutConstraint(item: imageV, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: imageV, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0))
         
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[titleL]-8-[imageV]", options: NSLayoutFormatOptions(), metrics: nil, views: views))
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[titleL]-8-[imageV]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         
-        self.addConstraint(NSLayoutConstraint(item: titleL, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: titleL, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0))
         
         
         
@@ -220,7 +216,7 @@ open class JoLoading: UIView {
         
         self.titleL.text = "\(title)"
         self.infoL.numberOfLines = 1
-        if message.characters.count > 1
+        if message.count > 1
         {
             self.infoL.text = ("        \(message)...")
         }
@@ -249,7 +245,7 @@ open class JoLoading: UIView {
         self.addAnimation()
         self.button.alpha = 1.0
         self.button.isEnabled = true
-        self.button.setTitle(button, for: UIControlState.normal)
+        self.button.setTitle(button, for: .normal)
         
         self.titleL.text = "\(title)"
         
@@ -271,11 +267,11 @@ open class JoLoading: UIView {
         self.indicator.stopAnimating()
         self.button.alpha = 0.0
         self.button.isEnabled = false
-    
+        
         
         if animated
         {
-//            weak var wself = self
+            //            weak var wself = self
             UIView.animate(withDuration: 0.34, animations: { () -> Void in
                 self.alpha = 0.0
             }) { (finish:Bool) -> Void in
@@ -290,9 +286,10 @@ open class JoLoading: UIView {
     }
     
     
-   
+    
     
 }
+
 
 
 
