@@ -1,6 +1,6 @@
 {
   "name": "JoLoading",
-  "version": "4.2.0",
+  "version": "5.0.0",
   "summary": "加载层.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/zhuxietong/JoLoading",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/zhuxietong/JoLoading.git",
-    "tag": "4.2.0"
+    "tag": "5.0.0"
   },
   "platforms": {
     "ios": "8.0"

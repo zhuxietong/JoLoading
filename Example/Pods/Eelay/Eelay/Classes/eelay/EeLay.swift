@@ -55,9 +55,9 @@ public prefix func .<<T>(value:T) -> [String:T]  {
 
 
 
-infix operator .&
+infix operator .+
 
-public func .&<T>(value:T,p:Double) -> Any  {
+public func .+<T>(value:T,p:Double) -> Any  {
     if var one = value as? [String:NumberValue]
     {
         one["p"] = p.doubleValue
@@ -229,7 +229,7 @@ extension String
 
 public extension UIView{
     
-    public var eelay:TP.lays {
+    var eelay:TP.lays {
         set(newValue){
             let format = UIView.eeformat(lays: newValue)
             _ = UIView.eelay(lays: format, at: self)
@@ -240,7 +240,7 @@ public extension UIView{
     }
     
     @discardableResult
-    public func setEeLays(lays:TP.lays) ->([[NSLayoutConstraint]],[NSLayoutConstraint]) {
+    func setEeLays(lays:TP.lays) ->([[NSLayoutConstraint]],[NSLayoutConstraint]) {
         let format = UIView.eeformat(lays: lays)
         //            print(format)
         return UIView.eelay(lays: format, at: self)
@@ -248,7 +248,7 @@ public extension UIView{
     
     
     @discardableResult
-    public func append(_ rules:Any...)->[NSLayoutConstraint] {
+    func append(_ rules:Any...)->[NSLayoutConstraint] {
         if let superV = self.superview
         {
             let new_rules = [self] + rules
@@ -282,13 +282,13 @@ public extension UIView{
                 //宽度-------------------------------------------
                 if let width = lay as? NumberValue
                 {
-                    new_one.append(width.doubleValue.&Double(easy.priority))
+                    new_one.append(width.doubleValue.+Double(easy.priority))
                 }
                 
                 //高度-------------------------------------------
                 if let height = lay as? String //height
                 {
-                    let ps = height.&Double(easy.priority)
+                    let ps = height.+Double(easy.priority)
                     new_one.append(ps)
                 }
                 
@@ -315,7 +315,7 @@ public extension UIView{
                                     new_values.append(value)
                                 }
                                 else{
-                                    new_values.append(one_value.&Double(easy.priority))
+                                    new_values.append(one_value.+Double(easy.priority))
                                 }
                             }
                             new_list.append(new_values)
@@ -332,7 +332,7 @@ public extension UIView{
                         }
                         else
                         {
-                            new_list.append([constain.&Double(easy.priority)])
+                            new_list.append([constain.+Double(easy.priority)])
                         }
                     }
                     new_one.append(new_list)
@@ -347,7 +347,7 @@ public extension UIView{
     
     
     @discardableResult
-    class public func eelay<T:UIView>(lays:TP.lays,at:T)->([[NSLayoutConstraint]],[NSLayoutConstraint]) {
+    class func eelay<T:UIView>(lays:TP.lays,at:T)->([[NSLayoutConstraint]],[NSLayoutConstraint]) {
         
         var constrains = [[NSLayoutConstraint]]()
         if lays.count > 0

@@ -20,7 +20,7 @@ public extension String {
     //        return String(self[self.characters.index(self.startIndex, offsetBy: range.lowerBound)..<self.characters.index(self.startIndex, offsetBy: range.upperBound)])
     //    }
     
-    public func sub(from:Int,end:Int) -> String {
+    func sub(from:Int,end:Int) -> String {
         let s = self.index(self.startIndex, offsetBy: from)
         let e = self.index(self.startIndex, offsetBy: end)
         

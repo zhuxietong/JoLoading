@@ -22,7 +22,7 @@ public extension JoLoading
         static var app_tag    = ""
     }
     
-    public func loading()
+    func loading()
     {
         self.loading(message: "数据加载中", title: Message.app_tag)
         
@@ -31,7 +31,7 @@ public extension JoLoading
     
     
     
-    public func failed()
+    func failed()
     {
         
         self.titleL.textColor = UIColor.darkText

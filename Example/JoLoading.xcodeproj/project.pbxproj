@@ -28,7 +28,7 @@
 		8BCD067506A309942FCE6BC7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		92BA6A0E50A7E9E806FBCD6A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9AAE4C2D647D18B6A6F7C7E7 /* Pods-JoLoading_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JoLoading_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JoLoading_Tests/Pods-JoLoading_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C512BEE99F7624052D7D4276 /* JoLoading.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JoLoading.podspec; path = ../JoLoading.podspec; sourceTree = "<group>"; };
+		C512BEE99F7624052D7D4276 /* JoLoading.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JoLoading.podspec; path = ../JoLoading.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D3D6CE221F7B83E800D7D47E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D3D6CE231F7B83F700D7D47E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF6497BAC87E34337FF7FFA5 /* Pods_JoLoading_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoLoading_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,13 +146,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 6N3M54L98W;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -161,6 +161,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -194,7 +195,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JoLoading_Example/Pods-JoLoading_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JoLoading_Example/Pods-JoLoading_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Eelay/Eelay.framework",
 				"${BUILT_PRODUCTS_DIR}/JoLoading/JoLoading.framework",
 			);
@@ -205,7 +206,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JoLoading_Example/Pods-JoLoading_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JoLoading_Example/Pods-JoLoading_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4205C026BDD7E40F825EC6AE /* [CP] Check Pods Manifest.lock */ = {
@@ -256,6 +257,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -311,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -366,8 +369,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -382,8 +384,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.loading;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

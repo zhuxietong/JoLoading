@@ -7,341 +7,338 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1000ADB14F6A0F9A1C560F2FE51F2381 /* EeLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2200C6D31E76B0E53DCE42CA82B8B32 /* EeLay.swift */; };
-		20A25FD8A43937DC99CB1E7FE20F2ED7 /* TP.swift in Sources */ = {isa = PBXBuildFile; fileRef = E415679FB1642AE4681FD1FE544657A9 /* TP.swift */; };
-		38E09AB78DAE35C012C6B4C7C29CB17B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5689B8AB2E56597210AEFCF7055FEA /* Foundation.framework */; };
-		3920F7019E4C191F2D455507C383AFA2 /* JoLoading-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E72850563E147556A1EA681391548F8 /* JoLoading-dummy.m */; };
-		431450907025EFD9DB39D9E7D0B5ECC9 /* Collection+mutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F14D3DBF432B68C2D0B100A7FBE18FD /* Collection+mutable.swift */; };
-		44DCC7AD515B567F519730C715DFB692 /* Color-hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B1A42A53A72FE437C1A4D6526725C0 /* Color-hex.swift */; };
-		563425F971CDF5889035982D4A57322F /* Eelay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD10F3340D84C96A4041DCE3D23D751E /* Eelay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A157787B76F211E094984BF02E76507 /* Pods-JoLoading_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA7F460FA92F7C4E3E33D58D678EA43 /* Pods-JoLoading_Example-dummy.m */; };
-		5C60F0C1531254FD29B920D05D105CF4 /* Pods-JoLoading_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5045723C2AA7DABCDE525CF9223FD524 /* Pods-JoLoading_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		67424247E497A84AEDDE5C1D67E51A7B /* Eelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5FB746240084528255BB62CAFFC396D /* Eelay.framework */; };
-		75D00932BD26017C86151F5C09AF443C /* Loading-Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396238CA149A9FEA4F719D26B1E5DC97 /* Loading-Appearance.swift */; };
-		8D7035A23AA58025ECCE921395080562 /* JoLoading-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEC73C9B967FA5CE3A820E935CB1F2B7 /* JoLoading-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EC1534B4ADC06A117EB639E82065B1B /* Eelay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B574C524C73914AD013D044B5F7ABD89 /* Eelay-dummy.m */; };
-		A44861A6C9F35269E1AE5378823E57F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5689B8AB2E56597210AEFCF7055FEA /* Foundation.framework */; };
-		C761C8A66909BF41DBFBB33A26D7DCFE /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4335E320DA8FFC5C576CB8E88F251 /* LoadingPresenter.swift */; };
-		D14A6ED264B8EC5F344DA5FDFEC53BF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5689B8AB2E56597210AEFCF7055FEA /* Foundation.framework */; };
-		E9B9EE021DE036968DBE5956B903A6F8 /* JoLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1CFBB61EE9FCED3EC7399AB6DFEF8 /* JoLoading.swift */; };
+		0113967537EF7DAB14B3D3BF5DC86DCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0503B77BFCCFD415E7CF962CA3DCA45B /* Foundation.framework */; };
+		42F54538C7ACCBDE978509A0D9982FCD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0503B77BFCCFD415E7CF962CA3DCA45B /* Foundation.framework */; };
+		5D4E41F0829119293C4C640789135AE8 /* Pods-JoLoading_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDF3405A13F07B6C5FAD9E6E0E9DEE49 /* Pods-JoLoading_Example-dummy.m */; };
+		5FF4891AC98EC466A63B8809C17E74ED /* JoLoading-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F08128939BD260691566EA6160661AFC /* JoLoading-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64F50E35D778B2509F7A03B59343596C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0503B77BFCCFD415E7CF962CA3DCA45B /* Foundation.framework */; };
+		72DC8ED67CEE66F1EA2BB138F2BEAE17 /* Color-hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345AA7F7B3865F174A3152A1540368EC /* Color-hex.swift */; };
+		7DFF91CA962882D675506168B36A95BF /* JoLoading-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D1D700A3A4BA4E3FF75082E91887A /* JoLoading-dummy.m */; };
+		900F652293FC518C73F011C6D814F67C /* JoLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7234468808E60B789365B57A8BD5DA57 /* JoLoading.swift */; };
+		95FB39EAF4A88D5C343ACA8B0285CB05 /* Eelay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 164038E7338B799C241CAF65DAA5FD22 /* Eelay-dummy.m */; };
+		B587C4574CA190EEFBAB2AAD667B3412 /* Collection+mutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351A40628BCBB462B9734A86920F6D16 /* Collection+mutable.swift */; };
+		B983CEEE5BB655EC8AF84FB5B287CD8F /* Pods-JoLoading_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BDF77CAFFBF268DBC2B03036224296 /* Pods-JoLoading_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C309D15C6A1BDA28D5E89A7B03C4B130 /* Eelay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C524E050CFEB56546DC42085481C319 /* Eelay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3A06D6C0C8FEC0D8CD99FCF2F1C8576 /* Loading-Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1C44F9E49129E849B3F18D34B0E448 /* Loading-Appearance.swift */; };
+		CDF465B6FFC6F0BFBA260E0DA3A4A03C /* Eelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EE5BD8DBF05AAFF1DC6DF136A0E6FC /* Eelay.framework */; };
+		EBF48D97B32EC064F2B4FCD1C7B2622A /* EeLay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75729643508C9D23B6EB5F2778364AE0 /* EeLay.swift */; };
+		F89BA3EEA1E6F38A304B29C6AA6EA87A /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1090A844000EC960D1A4775B47BE8360 /* LoadingPresenter.swift */; };
+		FF203C04A351E9CCB05C7B8C761FC1A6 /* TP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75623C366D0768AADF718E72CA1DF5C4 /* TP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1918DE8FB5416CC92FA67EF19400150D /* PBXContainerItemProxy */ = {
+		5BA7B43059714D4F0B1359822F5E0351 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FCB7CF1AD1EF8D6D6AFCFAACF9AA6D61;
-			remoteInfo = Eelay;
-		};
-		4036188728B6FD00BBDEF884A25083C4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FCB7CF1AD1EF8D6D6AFCFAACF9AA6D61;
-			remoteInfo = Eelay;
-		};
-		E70609684A3194E2AF5DA8F0C3CBB6A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 07F715B40743733AA61B6C93566F79C6;
+			remoteGlobalIDString = 565E427E93E43A767D883C776765D008;
 			remoteInfo = JoLoading;
+		};
+		8220BB7C427C5C3CDA493472653FE070 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E26259855466AF516F55BC1DB6B2CEFE;
+			remoteInfo = Eelay;
+		};
+		90F2B026CBAC34CC77831DE3E11F089F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E26259855466AF516F55BC1DB6B2CEFE;
+			remoteInfo = Eelay;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		013F1E3D6CFD36594AC9FFA65198E36C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		041A89EA2A7AE0F490F987147A803F62 /* Eelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Eelay.framework; path = Eelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		05B1F25674D3307D0AF63A5267F5371B /* Pods-JoLoading_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JoLoading_Example-resources.sh"; sourceTree = "<group>"; };
-		10FDF0A0C71D6532484AD8BFE8A78A41 /* JoLoading.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JoLoading.xcconfig; sourceTree = "<group>"; };
-		207FF3424E8E4250EC5D0B8C65A2F2D4 /* Eelay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eelay.xcconfig; sourceTree = "<group>"; };
-		2936101D51254093348AEEA325E53956 /* Pods-JoLoading_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JoLoading_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		2C0C69D3DC0217765C5581AB1551FF07 /* JoLoading.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JoLoading.modulemap; sourceTree = "<group>"; };
-		2DB1CFBB61EE9FCED3EC7399AB6DFEF8 /* JoLoading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JoLoading.swift; path = JoLoading/Classes/JoLoading.swift; sourceTree = "<group>"; };
-		345EE234B514AB6F993BEA1A7B7189E2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		396238CA149A9FEA4F719D26B1E5DC97 /* Loading-Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Loading-Appearance.swift"; path = "JoLoading/Classes/Loading-Appearance.swift"; sourceTree = "<group>"; };
-		3EA7F460FA92F7C4E3E33D58D678EA43 /* Pods-JoLoading_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JoLoading_Example-dummy.m"; sourceTree = "<group>"; };
-		5045723C2AA7DABCDE525CF9223FD524 /* Pods-JoLoading_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JoLoading_Example-umbrella.h"; sourceTree = "<group>"; };
-		5AD4335E320DA8FFC5C576CB8E88F251 /* LoadingPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingPresenter.swift; path = JoLoading/Classes/LoadingPresenter.swift; sourceTree = "<group>"; };
-		6AC5DD08D39DCFE4D722CE059A34B7AF /* Eelay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Eelay.modulemap; sourceTree = "<group>"; };
-		74B1A42A53A72FE437C1A4D6526725C0 /* Color-hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color-hex.swift"; path = "Eelay/Classes/style/Color-hex.swift"; sourceTree = "<group>"; };
-		7AAFB3B1C67F63AE27937D4BB9B69285 /* Pods-JoLoading_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JoLoading_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7D5689B8AB2E56597210AEFCF7055FEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		862101FD9D402BE5CC0A7CC5C5CE1541 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BB82E5E60581E189A557504DE5D8F30 /* Pods-JoLoading_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JoLoading_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		8E72850563E147556A1EA681391548F8 /* JoLoading-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JoLoading-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9717BFDBCFE1AD03D00359CA2296DA92 /* Pods-JoLoading_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JoLoading_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9E1A1291A6580C49A77A09542DFE22C3 /* Eelay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eelay-prefix.pch"; sourceTree = "<group>"; };
-		9F14D3DBF432B68C2D0B100A7FBE18FD /* Collection+mutable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+mutable.swift"; path = "Eelay/Classes/object/Collection+mutable.swift"; sourceTree = "<group>"; };
-		A37449048DEB3BF11604CB9589BDB744 /* JoLoading.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = JoLoading.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A47AFEC424A4CFCE0E12920E986CFF53 /* JoLoading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JoLoading.framework; path = JoLoading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A896104CABB8C326D3A7DE32A797CEAB /* JoLoading-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JoLoading-prefix.pch"; sourceTree = "<group>"; };
-		AEC73C9B967FA5CE3A820E935CB1F2B7 /* JoLoading-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JoLoading-umbrella.h"; sourceTree = "<group>"; };
-		AEE6FC76342C86331C8C889E1563D6A8 /* Pods_JoLoading_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JoLoading_Example.framework; path = "Pods-JoLoading_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B574C524C73914AD013D044B5F7ABD89 /* Eelay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eelay-dummy.m"; sourceTree = "<group>"; };
-		BB538BDAEFA1F029E3036D9DFFA75300 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C851200FEA8E53500B0DC877765F647B /* Pods-JoLoading_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JoLoading_Example-frameworks.sh"; sourceTree = "<group>"; };
-		CD10F3340D84C96A4041DCE3D23D751E /* Eelay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eelay-umbrella.h"; sourceTree = "<group>"; };
-		D2500A62E5A196F6ADE4A91BBD2DA4D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		D5FB746240084528255BB62CAFFC396D /* Eelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB44204CDE814276A8061DE8B5FD8647 /* Pods-JoLoading_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JoLoading_Example.modulemap"; sourceTree = "<group>"; };
-		E2200C6D31E76B0E53DCE42CA82B8B32 /* EeLay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EeLay.swift; path = Eelay/Classes/eelay/EeLay.swift; sourceTree = "<group>"; };
-		E415679FB1642AE4681FD1FE544657A9 /* TP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TP.swift; path = Eelay/Classes/TP.swift; sourceTree = "<group>"; };
+		0503B77BFCCFD415E7CF962CA3DCA45B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		056888ADAFAD770112E263015761EB79 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09F620E936FF7F675953251C3C644D3C /* Eelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EC86D5D79604C3F15F37F444975F2D1 /* Eelay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Eelay-Info.plist"; sourceTree = "<group>"; };
+		1090A844000EC960D1A4775B47BE8360 /* LoadingPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadingPresenter.swift; path = JoLoading/Classes/LoadingPresenter.swift; sourceTree = "<group>"; };
+		164038E7338B799C241CAF65DAA5FD22 /* Eelay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Eelay-dummy.m"; sourceTree = "<group>"; };
+		20FE8AE7AC4DBCBB40679D161EF7F6FA /* Eelay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eelay-prefix.pch"; sourceTree = "<group>"; };
+		2D7D1D700A3A4BA4E3FF75082E91887A /* JoLoading-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JoLoading-dummy.m"; sourceTree = "<group>"; };
+		33C12F427F5B76DC6B709211E508181A /* Eelay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Eelay.modulemap; sourceTree = "<group>"; };
+		345AA7F7B3865F174A3152A1540368EC /* Color-hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color-hex.swift"; path = "Eelay/Classes/style/Color-hex.swift"; sourceTree = "<group>"; };
+		351A40628BCBB462B9734A86920F6D16 /* Collection+mutable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+mutable.swift"; path = "Eelay/Classes/object/Collection+mutable.swift"; sourceTree = "<group>"; };
+		54376B6296652C52989A471CA17BFF6D /* Pods-JoLoading_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JoLoading_Example.release.xcconfig"; sourceTree = "<group>"; };
+		6C524E050CFEB56546DC42085481C319 /* Eelay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Eelay-umbrella.h"; sourceTree = "<group>"; };
+		7234468808E60B789365B57A8BD5DA57 /* JoLoading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JoLoading.swift; path = JoLoading/Classes/JoLoading.swift; sourceTree = "<group>"; };
+		74FED69FCD05B52766D934A36670367B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		75623C366D0768AADF718E72CA1DF5C4 /* TP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TP.swift; path = Eelay/Classes/TP.swift; sourceTree = "<group>"; };
+		75729643508C9D23B6EB5F2778364AE0 /* EeLay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EeLay.swift; path = Eelay/Classes/eelay/EeLay.swift; sourceTree = "<group>"; };
+		79EE5BD8DBF05AAFF1DC6DF136A0E6FC /* Eelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84BDF77CAFFBF268DBC2B03036224296 /* Pods-JoLoading_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JoLoading_Example-umbrella.h"; sourceTree = "<group>"; };
+		92E502B3144FAF7C06290B254E937CD3 /* Pods-JoLoading_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JoLoading_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		94F6CC566A4782F95D67A50FD4FC9279 /* Pods-JoLoading_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JoLoading_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F1C44F9E49129E849B3F18D34B0E448 /* Loading-Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Loading-Appearance.swift"; path = "JoLoading/Classes/Loading-Appearance.swift"; sourceTree = "<group>"; };
+		B2B9C19EA1B9554FB5D46E7F49A1EC69 /* JoLoading.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JoLoading.xcconfig; sourceTree = "<group>"; };
+		B5AB64F3B1032512A549F24CFAD5D051 /* Eelay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eelay.xcconfig; sourceTree = "<group>"; };
+		BFB1CA7CC4A01403C4AE1BFC8DF12675 /* Pods-JoLoading_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JoLoading_Example.modulemap"; sourceTree = "<group>"; };
+		C22A1CF6E4E0C39694D723625864A457 /* Pods-JoLoading_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JoLoading_Example-frameworks.sh"; sourceTree = "<group>"; };
+		C2C84E07EA3B1736670C0B14C5D2E160 /* JoLoading-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JoLoading-Info.plist"; sourceTree = "<group>"; };
+		C903E4990014AF7D6F7C17C12011AED9 /* Pods_JoLoading_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JoLoading_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C97275BFA9760548CC42F09B62FFA6C9 /* JoLoading.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = JoLoading.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CAC6DDEB73315C55C10E914A31524385 /* JoLoading.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JoLoading.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBAF85A52A7B0B26AE59D6D860B0F41 /* JoLoading-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JoLoading-prefix.pch"; sourceTree = "<group>"; };
+		E4DD1A6181E7F4353586A690721968FC /* JoLoading.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JoLoading.modulemap; sourceTree = "<group>"; };
+		F08128939BD260691566EA6160661AFC /* JoLoading-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JoLoading-umbrella.h"; sourceTree = "<group>"; };
+		F283489588D51C0956A5437C6D018B5A /* Pods-JoLoading_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JoLoading_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FC5391980349D5CE29CFAEC3D0DF99E4 /* Pods-JoLoading_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JoLoading_Example-Info.plist"; sourceTree = "<group>"; };
+		FDF3405A13F07B6C5FAD9E6E0E9DEE49 /* Pods-JoLoading_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JoLoading_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		775946AD234635BA984B36B79D39C565 /* Frameworks */ = {
+		08B92745179C38553B29BF1314702482 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67424247E497A84AEDDE5C1D67E51A7B /* Eelay.framework in Frameworks */,
-				A44861A6C9F35269E1AE5378823E57F5 /* Foundation.framework in Frameworks */,
+				64F50E35D778B2509F7A03B59343596C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		801E6513C762E9B4F20D935FBD43227E /* Frameworks */ = {
+		54874AEFE0D2F0579BD44E1787D3B28C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D14A6ED264B8EC5F344DA5FDFEC53BF4 /* Foundation.framework in Frameworks */,
+				CDF465B6FFC6F0BFBA260E0DA3A4A03C /* Eelay.framework in Frameworks */,
+				0113967537EF7DAB14B3D3BF5DC86DCE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED6B1B7A5BC37499C5FAE7F33BD0FC20 /* Frameworks */ = {
+		6CF8BFA1C55E77E77BE56ECDC4BB9B40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38E09AB78DAE35C012C6B4C7C29CB17B /* Foundation.framework in Frameworks */,
+				42F54538C7ACCBDE978509A0D9982FCD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C9CD4C5CA70D9E81DEE712EC528A5A3 /* Pods */ = {
+		030D6AFEA4D5FE30A891F65019968248 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				97C39CF1F000626C415B347B37B5A794 /* Eelay */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		1F6B1B74EE0B286394EA6A72C22528B9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				862101FD9D402BE5CC0A7CC5C5CE1541 /* Info.plist */,
-				2C0C69D3DC0217765C5581AB1551FF07 /* JoLoading.modulemap */,
-				10FDF0A0C71D6532484AD8BFE8A78A41 /* JoLoading.xcconfig */,
-				8E72850563E147556A1EA681391548F8 /* JoLoading-dummy.m */,
-				A896104CABB8C326D3A7DE32A797CEAB /* JoLoading-prefix.pch */,
-				AEC73C9B967FA5CE3A820E935CB1F2B7 /* JoLoading-umbrella.h */,
+				E4DD1A6181E7F4353586A690721968FC /* JoLoading.modulemap */,
+				B2B9C19EA1B9554FB5D46E7F49A1EC69 /* JoLoading.xcconfig */,
+				2D7D1D700A3A4BA4E3FF75082E91887A /* JoLoading-dummy.m */,
+				C2C84E07EA3B1736670C0B14C5D2E160 /* JoLoading-Info.plist */,
+				CDBAF85A52A7B0B26AE59D6D860B0F41 /* JoLoading-prefix.pch */,
+				F08128939BD260691566EA6160661AFC /* JoLoading-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/JoLoading";
 			sourceTree = "<group>";
 		};
-		30EFEA175B9A2436DF35C0976CE6A72E /* Products */ = {
+		2C5753C9A5B46552538B1A516307807A /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				041A89EA2A7AE0F490F987147A803F62 /* Eelay.framework */,
-				A47AFEC424A4CFCE0E12920E986CFF53 /* JoLoading.framework */,
-				AEE6FC76342C86331C8C889E1563D6A8 /* Pods_JoLoading_Example.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6161FD5C974473C2E50A5FCFC68169D1 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				A37449048DEB3BF11604CB9589BDB744 /* JoLoading.podspec */,
-				D2500A62E5A196F6ADE4A91BBD2DA4D0 /* LICENSE */,
-				345EE234B514AB6F993BEA1A7B7189E2 /* README.md */,
+				C97275BFA9760548CC42F09B62FFA6C9 /* JoLoading.podspec */,
+				74FED69FCD05B52766D934A36670367B /* LICENSE */,
+				056888ADAFAD770112E263015761EB79 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		3191CC42F3E3E5BD62E6B206E30ECFD4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				FE1E27EA815BC75B0805B3ABC8E0F0CD /* Development Pods */,
-				EA33682E8B7D00715C91E7CCE55FB984 /* Frameworks */,
-				1C9CD4C5CA70D9E81DEE712EC528A5A3 /* Pods */,
-				30EFEA175B9A2436DF35C0976CE6A72E /* Products */,
-				CE1FB9D8B3F2C0ADB214A8C79BC42D2A /* Targets Support Files */,
+				0503B77BFCCFD415E7CF962CA3DCA45B /* Foundation.framework */,
 			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		97C39CF1F000626C415B347B37B5A794 /* Eelay */ = {
+		34E6C7456F5EA45A8EA4FA19AC353DC5 /* JoLoading */ = {
 			isa = PBXGroup;
 			children = (
-				9F14D3DBF432B68C2D0B100A7FBE18FD /* Collection+mutable.swift */,
-				74B1A42A53A72FE437C1A4D6526725C0 /* Color-hex.swift */,
-				E2200C6D31E76B0E53DCE42CA82B8B32 /* EeLay.swift */,
-				E415679FB1642AE4681FD1FE544657A9 /* TP.swift */,
-				F46B910B70EFC504F6407E2BBBAA31C8 /* Support Files */,
-			);
-			name = Eelay;
-			path = Eelay;
-			sourceTree = "<group>";
-		};
-		A7B6CEAA3D9094989D0C7F7A1B10E2B1 /* JoLoading */ = {
-			isa = PBXGroup;
-			children = (
-				2DB1CFBB61EE9FCED3EC7399AB6DFEF8 /* JoLoading.swift */,
-				396238CA149A9FEA4F719D26B1E5DC97 /* Loading-Appearance.swift */,
-				5AD4335E320DA8FFC5C576CB8E88F251 /* LoadingPresenter.swift */,
-				6161FD5C974473C2E50A5FCFC68169D1 /* Pod */,
-				1F6B1B74EE0B286394EA6A72C22528B9 /* Support Files */,
+				7234468808E60B789365B57A8BD5DA57 /* JoLoading.swift */,
+				9F1C44F9E49129E849B3F18D34B0E448 /* Loading-Appearance.swift */,
+				1090A844000EC960D1A4775B47BE8360 /* LoadingPresenter.swift */,
+				2C5753C9A5B46552538B1A516307807A /* Pod */,
+				030D6AFEA4D5FE30A891F65019968248 /* Support Files */,
 			);
 			name = JoLoading;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		ACDFAEF3D225766B04B0EE88DA2361E1 /* iOS */ = {
+		479B642CDF8A33D8106999447EF8C2F4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7D5689B8AB2E56597210AEFCF7055FEA /* Foundation.framework */,
+				34E6C7456F5EA45A8EA4FA19AC353DC5 /* JoLoading */,
 			);
-			name = iOS;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		CE1FB9D8B3F2C0ADB214A8C79BC42D2A /* Targets Support Files */ = {
+		5C06D59A442B88AEC6C2760B2751BFAC /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F68B1F2C43863272F27647EB17A5B0D5 /* Pods-JoLoading_Example */,
+				84924007DCE8857ACA0539FB43A4549D /* Pods-JoLoading_Example */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EA33682E8B7D00715C91E7CCE55FB984 /* Frameworks */ = {
+		843C024842D592CC0B01F79A1460922B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D5FB746240084528255BB62CAFFC396D /* Eelay.framework */,
-				ACDFAEF3D225766B04B0EE88DA2361E1 /* iOS */,
+				9FD54366FFFBC0EC0C6EE7701575F3C4 /* Eelay */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		F46B910B70EFC504F6407E2BBBAA31C8 /* Support Files */ = {
+		84924007DCE8857ACA0539FB43A4549D /* Pods-JoLoading_Example */ = {
 			isa = PBXGroup;
 			children = (
-				6AC5DD08D39DCFE4D722CE059A34B7AF /* Eelay.modulemap */,
-				207FF3424E8E4250EC5D0B8C65A2F2D4 /* Eelay.xcconfig */,
-				B574C524C73914AD013D044B5F7ABD89 /* Eelay-dummy.m */,
-				9E1A1291A6580C49A77A09542DFE22C3 /* Eelay-prefix.pch */,
-				CD10F3340D84C96A4041DCE3D23D751E /* Eelay-umbrella.h */,
-				BB538BDAEFA1F029E3036D9DFFA75300 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Eelay";
-			sourceTree = "<group>";
-		};
-		F68B1F2C43863272F27647EB17A5B0D5 /* Pods-JoLoading_Example */ = {
-			isa = PBXGroup;
-			children = (
-				013F1E3D6CFD36594AC9FFA65198E36C /* Info.plist */,
-				DB44204CDE814276A8061DE8B5FD8647 /* Pods-JoLoading_Example.modulemap */,
-				9717BFDBCFE1AD03D00359CA2296DA92 /* Pods-JoLoading_Example-acknowledgements.markdown */,
-				2936101D51254093348AEEA325E53956 /* Pods-JoLoading_Example-acknowledgements.plist */,
-				3EA7F460FA92F7C4E3E33D58D678EA43 /* Pods-JoLoading_Example-dummy.m */,
-				C851200FEA8E53500B0DC877765F647B /* Pods-JoLoading_Example-frameworks.sh */,
-				05B1F25674D3307D0AF63A5267F5371B /* Pods-JoLoading_Example-resources.sh */,
-				5045723C2AA7DABCDE525CF9223FD524 /* Pods-JoLoading_Example-umbrella.h */,
-				8BB82E5E60581E189A557504DE5D8F30 /* Pods-JoLoading_Example.debug.xcconfig */,
-				7AAFB3B1C67F63AE27937D4BB9B69285 /* Pods-JoLoading_Example.release.xcconfig */,
+				BFB1CA7CC4A01403C4AE1BFC8DF12675 /* Pods-JoLoading_Example.modulemap */,
+				F283489588D51C0956A5437C6D018B5A /* Pods-JoLoading_Example-acknowledgements.markdown */,
+				94F6CC566A4782F95D67A50FD4FC9279 /* Pods-JoLoading_Example-acknowledgements.plist */,
+				FDF3405A13F07B6C5FAD9E6E0E9DEE49 /* Pods-JoLoading_Example-dummy.m */,
+				C22A1CF6E4E0C39694D723625864A457 /* Pods-JoLoading_Example-frameworks.sh */,
+				FC5391980349D5CE29CFAEC3D0DF99E4 /* Pods-JoLoading_Example-Info.plist */,
+				84BDF77CAFFBF268DBC2B03036224296 /* Pods-JoLoading_Example-umbrella.h */,
+				92E502B3144FAF7C06290B254E937CD3 /* Pods-JoLoading_Example.debug.xcconfig */,
+				54376B6296652C52989A471CA17BFF6D /* Pods-JoLoading_Example.release.xcconfig */,
 			);
 			name = "Pods-JoLoading_Example";
 			path = "Target Support Files/Pods-JoLoading_Example";
 			sourceTree = "<group>";
 		};
-		FE1E27EA815BC75B0805B3ABC8E0F0CD /* Development Pods */ = {
+		9FD54366FFFBC0EC0C6EE7701575F3C4 /* Eelay */ = {
 			isa = PBXGroup;
 			children = (
-				A7B6CEAA3D9094989D0C7F7A1B10E2B1 /* JoLoading */,
+				351A40628BCBB462B9734A86920F6D16 /* Collection+mutable.swift */,
+				345AA7F7B3865F174A3152A1540368EC /* Color-hex.swift */,
+				75729643508C9D23B6EB5F2778364AE0 /* EeLay.swift */,
+				75623C366D0768AADF718E72CA1DF5C4 /* TP.swift */,
+				E591F628E8B2AA79297037FCBE6E9D91 /* Support Files */,
 			);
-			name = "Development Pods";
+			path = Eelay;
+			sourceTree = "<group>";
+		};
+		C45C7FFE715342073591378B49739754 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79EE5BD8DBF05AAFF1DC6DF136A0E6FC /* Eelay.framework */,
+				3191CC42F3E3E5BD62E6B206E30ECFD4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				479B642CDF8A33D8106999447EF8C2F4 /* Development Pods */,
+				C45C7FFE715342073591378B49739754 /* Frameworks */,
+				843C024842D592CC0B01F79A1460922B /* Pods */,
+				FFF6F5ABC9E188ED67950D180553755F /* Products */,
+				5C06D59A442B88AEC6C2760B2751BFAC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E591F628E8B2AA79297037FCBE6E9D91 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				33C12F427F5B76DC6B709211E508181A /* Eelay.modulemap */,
+				B5AB64F3B1032512A549F24CFAD5D051 /* Eelay.xcconfig */,
+				164038E7338B799C241CAF65DAA5FD22 /* Eelay-dummy.m */,
+				0EC86D5D79604C3F15F37F444975F2D1 /* Eelay-Info.plist */,
+				20FE8AE7AC4DBCBB40679D161EF7F6FA /* Eelay-prefix.pch */,
+				6C524E050CFEB56546DC42085481C319 /* Eelay-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Eelay";
+			sourceTree = "<group>";
+		};
+		FFF6F5ABC9E188ED67950D180553755F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09F620E936FF7F675953251C3C644D3C /* Eelay.framework */,
+				CAC6DDEB73315C55C10E914A31524385 /* JoLoading.framework */,
+				C903E4990014AF7D6F7C17C12011AED9 /* Pods_JoLoading_Example.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3225D01765DFB03FA4B6075A241725B1 /* Headers */ = {
+		28B226C79C1CD6B628F4DA3F96F47916 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				563425F971CDF5889035982D4A57322F /* Eelay-umbrella.h in Headers */,
+				B983CEEE5BB655EC8AF84FB5B287CD8F /* Pods-JoLoading_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		856CEF3A2934A19CC3CEDAA04249F9F8 /* Headers */ = {
+		3F82FF5C9706A66238DD8BD6EA2EE26D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D7035A23AA58025ECCE921395080562 /* JoLoading-umbrella.h in Headers */,
+				5FF4891AC98EC466A63B8809C17E74ED /* JoLoading-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1569E3C2D0C7B6DC23B6E9C41CE7160 /* Headers */ = {
+		53432BEBFABE85A295B49D1E9118F3CA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C60F0C1531254FD29B920D05D105CF4 /* Pods-JoLoading_Example-umbrella.h in Headers */,
+				C309D15C6A1BDA28D5E89A7B03C4B130 /* Eelay-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		07F715B40743733AA61B6C93566F79C6 /* JoLoading */ = {
+		565E427E93E43A767D883C776765D008 /* JoLoading */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D5F474C7814421807F4488E69814194 /* Build configuration list for PBXNativeTarget "JoLoading" */;
+			buildConfigurationList = 6F431862C1724F7BBE61F549A6C4AA8D /* Build configuration list for PBXNativeTarget "JoLoading" */;
 			buildPhases = (
-				856CEF3A2934A19CC3CEDAA04249F9F8 /* Headers */,
-				0C382B1D20986D20505A73DB270D2394 /* Sources */,
-				775946AD234635BA984B36B79D39C565 /* Frameworks */,
-				36216F7993D007595238A0FF4AE1C5FB /* Resources */,
+				3F82FF5C9706A66238DD8BD6EA2EE26D /* Headers */,
+				8D6589728BBA4014AA2BAF243BAB4FCA /* Sources */,
+				54874AEFE0D2F0579BD44E1787D3B28C /* Frameworks */,
+				1E0FC82B3E627C4EFEDF45343E4A7EB7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0A5631A88687203DCDED97014F3B1E01 /* PBXTargetDependency */,
+				B32C8ED63A16132EE5F5AD90307C83D2 /* PBXTargetDependency */,
 			);
 			name = JoLoading;
 			productName = JoLoading;
-			productReference = A47AFEC424A4CFCE0E12920E986CFF53 /* JoLoading.framework */;
+			productReference = CAC6DDEB73315C55C10E914A31524385 /* JoLoading.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5F2F8BBE6B109F4F6FEF697897B7D93C /* Pods-JoLoading_Example */ = {
+		8388C6F8245BCF31B249F9BB3F82A2F1 /* Pods-JoLoading_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DD42006E3164E80BAABFAF98BBC554C /* Build configuration list for PBXNativeTarget "Pods-JoLoading_Example" */;
+			buildConfigurationList = 4C3DD6CD9B22BBFD54EDDDFA02F5A462 /* Build configuration list for PBXNativeTarget "Pods-JoLoading_Example" */;
 			buildPhases = (
-				B1569E3C2D0C7B6DC23B6E9C41CE7160 /* Headers */,
-				883640E581FDA6017C8BE198B35F14F2 /* Sources */,
-				801E6513C762E9B4F20D935FBD43227E /* Frameworks */,
-				F0ECEF342208867A543838B7924EF731 /* Resources */,
+				28B226C79C1CD6B628F4DA3F96F47916 /* Headers */,
+				9A4C18D6CE09C21CE39226E53982B9C6 /* Sources */,
+				6CF8BFA1C55E77E77BE56ECDC4BB9B40 /* Frameworks */,
+				0BE508AC95073052C5108A2678E0A5A4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				73143107983EA443F962621610A82E23 /* PBXTargetDependency */,
-				DA412F11FC0CE3E7FD081FA66FEEFCD2 /* PBXTargetDependency */,
+				138AA28ED95A8D4CA4DA41215A056AE7 /* PBXTargetDependency */,
+				EE8F34EFA3F9F78D5806BB7B179005DF /* PBXTargetDependency */,
 			);
 			name = "Pods-JoLoading_Example";
 			productName = "Pods-JoLoading_Example";
-			productReference = AEE6FC76342C86331C8C889E1563D6A8 /* Pods_JoLoading_Example.framework */;
+			productReference = C903E4990014AF7D6F7C17C12011AED9 /* Pods_JoLoading_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FCB7CF1AD1EF8D6D6AFCFAACF9AA6D61 /* Eelay */ = {
+		E26259855466AF516F55BC1DB6B2CEFE /* Eelay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DA405C1A9BB543C33EC82F79A754EF01 /* Build configuration list for PBXNativeTarget "Eelay" */;
+			buildConfigurationList = 68ECA0E1026347D43C9CF8A4FB5D8560 /* Build configuration list for PBXNativeTarget "Eelay" */;
 			buildPhases = (
-				3225D01765DFB03FA4B6075A241725B1 /* Headers */,
-				08A627675D7890256E4529BE70A43766 /* Sources */,
-				ED6B1B7A5BC37499C5FAE7F33BD0FC20 /* Frameworks */,
-				6C70EFD4E254F2A001D309AE68E5D547 /* Resources */,
+				53432BEBFABE85A295B49D1E9118F3CA /* Headers */,
+				80EF05BDF1519062F6DF98B63D3E4D27 /* Sources */,
+				08B92745179C38553B29BF1314702482 /* Frameworks */,
+				0B6F7454B0D9D599FA8D009BAF42EFA9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -349,53 +346,62 @@
 			);
 			name = Eelay;
 			productName = Eelay;
-			productReference = 041A89EA2A7AE0F490F987147A803F62 /* Eelay.framework */;
+			productReference = 09F620E936FF7F675953251C3C644D3C /* Eelay.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
+				TargetAttributes = {
+					565E427E93E43A767D883C776765D008 = {
+						LastSwiftMigration = 1020;
+					};
+					E26259855466AF516F55BC1DB6B2CEFE = {
+						LastSwiftMigration = 1020;
+					};
+				};
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 30EFEA175B9A2436DF35C0976CE6A72E /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = FFF6F5ABC9E188ED67950D180553755F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FCB7CF1AD1EF8D6D6AFCFAACF9AA6D61 /* Eelay */,
-				07F715B40743733AA61B6C93566F79C6 /* JoLoading */,
-				5F2F8BBE6B109F4F6FEF697897B7D93C /* Pods-JoLoading_Example */,
+				E26259855466AF516F55BC1DB6B2CEFE /* Eelay */,
+				565E427E93E43A767D883C776765D008 /* JoLoading */,
+				8388C6F8245BCF31B249F9BB3F82A2F1 /* Pods-JoLoading_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		36216F7993D007595238A0FF4AE1C5FB /* Resources */ = {
+		0B6F7454B0D9D599FA8D009BAF42EFA9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C70EFD4E254F2A001D309AE68E5D547 /* Resources */ = {
+		0BE508AC95073052C5108A2678E0A5A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F0ECEF342208867A543838B7924EF731 /* Resources */ = {
+		1E0FC82B3E627C4EFEDF45343E4A7EB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -405,163 +411,66 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		08A627675D7890256E4529BE70A43766 /* Sources */ = {
+		80EF05BDF1519062F6DF98B63D3E4D27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431450907025EFD9DB39D9E7D0B5ECC9 /* Collection+mutable.swift in Sources */,
-				44DCC7AD515B567F519730C715DFB692 /* Color-hex.swift in Sources */,
-				8EC1534B4ADC06A117EB639E82065B1B /* Eelay-dummy.m in Sources */,
-				1000ADB14F6A0F9A1C560F2FE51F2381 /* EeLay.swift in Sources */,
-				20A25FD8A43937DC99CB1E7FE20F2ED7 /* TP.swift in Sources */,
+				B587C4574CA190EEFBAB2AAD667B3412 /* Collection+mutable.swift in Sources */,
+				72DC8ED67CEE66F1EA2BB138F2BEAE17 /* Color-hex.swift in Sources */,
+				95FB39EAF4A88D5C343ACA8B0285CB05 /* Eelay-dummy.m in Sources */,
+				EBF48D97B32EC064F2B4FCD1C7B2622A /* EeLay.swift in Sources */,
+				FF203C04A351E9CCB05C7B8C761FC1A6 /* TP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0C382B1D20986D20505A73DB270D2394 /* Sources */ = {
+		8D6589728BBA4014AA2BAF243BAB4FCA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3920F7019E4C191F2D455507C383AFA2 /* JoLoading-dummy.m in Sources */,
-				E9B9EE021DE036968DBE5956B903A6F8 /* JoLoading.swift in Sources */,
-				75D00932BD26017C86151F5C09AF443C /* Loading-Appearance.swift in Sources */,
-				C761C8A66909BF41DBFBB33A26D7DCFE /* LoadingPresenter.swift in Sources */,
+				7DFF91CA962882D675506168B36A95BF /* JoLoading-dummy.m in Sources */,
+				900F652293FC518C73F011C6D814F67C /* JoLoading.swift in Sources */,
+				C3A06D6C0C8FEC0D8CD99FCF2F1C8576 /* Loading-Appearance.swift in Sources */,
+				F89BA3EEA1E6F38A304B29C6AA6EA87A /* LoadingPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		883640E581FDA6017C8BE198B35F14F2 /* Sources */ = {
+		9A4C18D6CE09C21CE39226E53982B9C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A157787B76F211E094984BF02E76507 /* Pods-JoLoading_Example-dummy.m in Sources */,
+				5D4E41F0829119293C4C640789135AE8 /* Pods-JoLoading_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0A5631A88687203DCDED97014F3B1E01 /* PBXTargetDependency */ = {
+		138AA28ED95A8D4CA4DA41215A056AE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Eelay;
-			target = FCB7CF1AD1EF8D6D6AFCFAACF9AA6D61 /* Eelay */;
-			targetProxy = 1918DE8FB5416CC92FA67EF19400150D /* PBXContainerItemProxy */;
+			target = E26259855466AF516F55BC1DB6B2CEFE /* Eelay */;
+			targetProxy = 90F2B026CBAC34CC77831DE3E11F089F /* PBXContainerItemProxy */;
 		};
-		73143107983EA443F962621610A82E23 /* PBXTargetDependency */ = {
+		B32C8ED63A16132EE5F5AD90307C83D2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Eelay;
-			target = FCB7CF1AD1EF8D6D6AFCFAACF9AA6D61 /* Eelay */;
-			targetProxy = 4036188728B6FD00BBDEF884A25083C4 /* PBXContainerItemProxy */;
+			target = E26259855466AF516F55BC1DB6B2CEFE /* Eelay */;
+			targetProxy = 8220BB7C427C5C3CDA493472653FE070 /* PBXContainerItemProxy */;
 		};
-		DA412F11FC0CE3E7FD081FA66FEEFCD2 /* PBXTargetDependency */ = {
+		EE8F34EFA3F9F78D5806BB7B179005DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JoLoading;
-			target = 07F715B40743733AA61B6C93566F79C6 /* JoLoading */;
-			targetProxy = E70609684A3194E2AF5DA8F0C3CBB6A3 /* PBXContainerItemProxy */;
+			target = 565E427E93E43A767D883C776765D008 /* JoLoading */;
+			targetProxy = 5BA7B43059714D4F0B1359822F5E0351 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		544BBB861B9FFB04CCA680EEAC25EEC1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 207FF3424E8E4250EC5D0B8C65A2F2D4 /* Eelay.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Eelay/Eelay-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Eelay/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Eelay/Eelay.modulemap";
-				PRODUCT_MODULE_NAME = Eelay;
-				PRODUCT_NAME = Eelay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		65EBD68B5BC6360D5750AE8B3D2DEFBB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10FDF0A0C71D6532484AD8BFE8A78A41 /* JoLoading.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JoLoading/JoLoading-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JoLoading/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JoLoading/JoLoading.modulemap";
-				PRODUCT_MODULE_NAME = JoLoading;
-				PRODUCT_NAME = JoLoading;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		77D7744331CA0E9C190B107378696C10 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 207FF3424E8E4250EC5D0B8C65A2F2D4 /* Eelay.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Eelay/Eelay-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Eelay/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Eelay/Eelay.modulemap";
-				PRODUCT_MODULE_NAME = Eelay;
-				PRODUCT_NAME = Eelay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		96434B6C8FF320C976A10DAD7174A4BB /* Release */ = {
+		05DF210AC65EBB0E593AAF976B2C2177 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -590,8 +499,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -613,13 +520,15 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		97F59BCF0362CFA3AB87A936A10B61E4 /* Debug */ = {
+		3877A737676A214BB011A57118FC80D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8BB82E5E60581E189A557504DE5D8F30 /* Pods-JoLoading_Example.debug.xcconfig */;
+			baseConfigurationReference = 92E502B3144FAF7C06290B254E937CD3 /* Pods-JoLoading_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -631,7 +540,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JoLoading_Example/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-JoLoading_Example/Pods-JoLoading_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -644,54 +553,17 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B7F6837FFDAE12DE7CAFB59F27EFAF8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AAFB3B1C67F63AE27937D4BB9B69285 /* Pods-JoLoading_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JoLoading_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JoLoading_Example/Pods-JoLoading_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D11C82AF2204B41B80412B8DC9C1D652 /* Debug */ = {
+		421ECB1396280A8D83853C3DDBED1700 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -720,8 +592,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_ALLOWED = NO;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -748,13 +618,15 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		D5DF9FDE145A00F4AE0FBF7CE35F5A4D /* Release */ = {
+		640C9F0215019D4559D10F4EA7C82E55 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10FDF0A0C71D6532484AD8BFE8A78A41 /* JoLoading.xcconfig */;
+			baseConfigurationReference = B2B9C19EA1B9554FB5D46E7F49A1EC69 /* JoLoading.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -766,7 +638,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				GCC_PREFIX_HEADER = "Target Support Files/JoLoading/JoLoading-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JoLoading/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/JoLoading/JoLoading-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -776,9 +648,135 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C283A6DC1279BE9C447C2D8149FBA2D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5AB64F3B1032512A549F24CFAD5D051 /* Eelay.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Eelay/Eelay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Eelay/Eelay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Eelay/Eelay.modulemap";
+				PRODUCT_MODULE_NAME = Eelay;
+				PRODUCT_NAME = Eelay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D73089A8A8BD7949C8EC4E6C6E3BAE1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2B9C19EA1B9554FB5D46E7F49A1EC69 /* JoLoading.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JoLoading/JoLoading-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JoLoading/JoLoading-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JoLoading/JoLoading.modulemap";
+				PRODUCT_MODULE_NAME = JoLoading;
+				PRODUCT_NAME = JoLoading;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EF5D893B2B9DD6D30C88E7706F48DEBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54376B6296652C52989A471CA17BFF6D /* Pods-JoLoading_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JoLoading_Example/Pods-JoLoading_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JoLoading_Example/Pods-JoLoading_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F1732440B438379AA0A68C6008C54C34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5AB64F3B1032512A549F24CFAD5D051 /* Eelay.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Eelay/Eelay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Eelay/Eelay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Eelay/Eelay.modulemap";
+				PRODUCT_MODULE_NAME = Eelay;
+				PRODUCT_NAME = Eelay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -789,43 +787,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D11C82AF2204B41B80412B8DC9C1D652 /* Debug */,
-				96434B6C8FF320C976A10DAD7174A4BB /* Release */,
+				421ECB1396280A8D83853C3DDBED1700 /* Debug */,
+				05DF210AC65EBB0E593AAF976B2C2177 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D5F474C7814421807F4488E69814194 /* Build configuration list for PBXNativeTarget "JoLoading" */ = {
+		4C3DD6CD9B22BBFD54EDDDFA02F5A462 /* Build configuration list for PBXNativeTarget "Pods-JoLoading_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				65EBD68B5BC6360D5750AE8B3D2DEFBB /* Debug */,
-				D5DF9FDE145A00F4AE0FBF7CE35F5A4D /* Release */,
+				3877A737676A214BB011A57118FC80D0 /* Debug */,
+				EF5D893B2B9DD6D30C88E7706F48DEBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DD42006E3164E80BAABFAF98BBC554C /* Build configuration list for PBXNativeTarget "Pods-JoLoading_Example" */ = {
+		68ECA0E1026347D43C9CF8A4FB5D8560 /* Build configuration list for PBXNativeTarget "Eelay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97F59BCF0362CFA3AB87A936A10B61E4 /* Debug */,
-				B7F6837FFDAE12DE7CAFB59F27EFAF8F /* Release */,
+				C283A6DC1279BE9C447C2D8149FBA2D3 /* Debug */,
+				F1732440B438379AA0A68C6008C54C34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DA405C1A9BB543C33EC82F79A754EF01 /* Build configuration list for PBXNativeTarget "Eelay" */ = {
+		6F431862C1724F7BBE61F549A6C4AA8D /* Build configuration list for PBXNativeTarget "JoLoading" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				544BBB861B9FFB04CCA680EEAC25EEC1 /* Debug */,
-				77D7744331CA0E9C190B107378696C10 /* Release */,
+				D73089A8A8BD7949C8EC4E6C6E3BAE1E /* Debug */,
+				640C9F0215019D4559D10F4EA7C82E55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
