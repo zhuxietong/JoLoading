@@ -18,10 +18,12 @@
   "platforms": {
     "ios": "8.0"
   },
+  "swift_versions": "5.0",
   "source_files": "JoLoading/Classes/**/*",
   "dependencies": {
     "Eelay": [
 
     ]
-  }
+  },
+  "swift_version": "5.0"
 }

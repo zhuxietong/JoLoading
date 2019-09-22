@@ -1,5 +1,5 @@
 PODS:
-  - Eelay (5.0.0)
+  - Eelay (5.0.5)
   - JoLoading (5.0.0):
     - Eelay
 
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Eelay: 5df54717e3b302c6bef9e30cde4685f1d8625cbb
-  JoLoading: 9d40e88c07f815a542146eaee4957974f472d375
+  Eelay: 21775ae88a2f226fbaf7b9844ce37c8e9950acd7
+  JoLoading: fb09a3f7446aa9db4be035e0df90249425348077
 
 PODFILE CHECKSUM: 9ceb28b80d9cedc84d759f3e1a94f0ccb906bb7c
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.4
