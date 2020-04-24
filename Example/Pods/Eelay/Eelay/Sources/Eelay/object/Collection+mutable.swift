@@ -7,8 +7,7 @@
 //
 
 import Foundation
-
-
+import UIKit
 public extension Array
 {
     var mutable_array:NSMutableArray

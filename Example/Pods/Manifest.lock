@@ -1,13 +1,13 @@
 PODS:
-  - Eelay (4.2.0)
-  - JoLoading (4.2.0):
+  - Eelay (5.1.1)
+  - JoLoading (5.1.0):
     - Eelay
 
 DEPENDENCIES:
   - JoLoading (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Eelay
 
 EXTERNAL SOURCES:
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Eelay: 17ebd64f4f5f0873bfbd68084ac099eb1edd0d1c
-  JoLoading: eadd5bd0c0dcc63ea5c396c013208f5bc3edaaa7
+  Eelay: 606ad704f4c27b20eae149e47ec998f1373c5050
+  JoLoading: 2759278663680c85036537263b2e294be7408117
 
 PODFILE CHECKSUM: 9ceb28b80d9cedc84d759f3e1a94f0ccb906bb7c
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1

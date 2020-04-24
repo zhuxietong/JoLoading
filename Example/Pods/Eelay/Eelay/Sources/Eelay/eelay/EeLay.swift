@@ -55,9 +55,9 @@ public prefix func .<<T>(value:T) -> [String:T]  {
 
 
 
-infix operator .&
+infix operator .+
 
-public func .&<T>(value:T,p:Double) -> Any  {
+public func .+<T>(value:T,p:Double) -> Any  {
     if var one = value as? [String:NumberValue]
     {
         one["p"] = p.doubleValue
@@ -86,12 +86,35 @@ public func .&<T>(value:T,p:Double) -> Any  {
 
 public typealias ee = easy
 
+enum EasyTarget{
+    case view
+    case safeArea
+    case none
+}
+
 open class easy {
     
     static var priority:Float = 800
     
     public class lay{
         var value:NSLayoutConstraint.Attribute
+        var target:EasyTarget = .view
+        
+        public func constrainTarget(view:UIView?) -> Any? {
+            switch self.target {
+            case .safeArea:
+                if #available(iOS 11.0, *) {
+                    return view?.safeAreaLayoutGuide
+                } else {
+                    return view
+                    // Fallback on earlier versions
+                }
+            case .none:
+                return nil
+            default:
+                return view
+            }
+        }
         
         init(v:NSLayoutConstraint.Attribute){
             self.value = v
@@ -131,7 +154,24 @@ open class easy {
             self.values.append(lay(v: .centerY))
             return self
         }
-        
+        public var safe:easy.map{
+            for one in values {
+                one.target = .safeArea
+            }
+            return self
+        }
+        public var view:easy.map{
+            for one in values {
+                one.target = .view
+            }
+            return self
+        }
+        public var none:easy.map{
+            for one in values {
+                one.target = .none
+            }
+            return self
+        }
         
         public var width:easy.map{
             self.values.append(lay(v: .width))
@@ -142,6 +182,7 @@ open class easy {
             self.values.append(lay(v: .height))
             return self
         }
+        
     }
     
     
@@ -176,6 +217,7 @@ open class easy {
     public static var none:easy.map{
         return map(v: NSLayoutConstraint.Attribute.notAnAttribute)
     }
+
 }
 
 
@@ -229,7 +271,7 @@ extension String
 
 public extension UIView{
     
-    public var eelay:TP.lays {
+    var eelay:TP.lays {
         set(newValue){
             let format = UIView.eeformat(lays: newValue)
             _ = UIView.eelay(lays: format, at: self)
@@ -240,7 +282,7 @@ public extension UIView{
     }
     
     @discardableResult
-    public func setEeLays(lays:TP.lays) ->([[NSLayoutConstraint]],[NSLayoutConstraint]) {
+    func setEeLays(lays:TP.lays) ->([[NSLayoutConstraint]],[NSLayoutConstraint]) {
         let format = UIView.eeformat(lays: lays)
         //            print(format)
         return UIView.eelay(lays: format, at: self)
@@ -248,7 +290,7 @@ public extension UIView{
     
     
     @discardableResult
-    public func append(_ rules:Any...)->[NSLayoutConstraint] {
+    func append(_ rules:Any...)->[NSLayoutConstraint] {
         if let superV = self.superview
         {
             let new_rules = [self] + rules
@@ -282,13 +324,13 @@ public extension UIView{
                 //宽度-------------------------------------------
                 if let width = lay as? NumberValue
                 {
-                    new_one.append(width.doubleValue.&Double(easy.priority))
+                    new_one.append(width.doubleValue.+Double(easy.priority))
                 }
                 
                 //高度-------------------------------------------
                 if let height = lay as? String //height
                 {
-                    let ps = height.&Double(easy.priority)
+                    let ps = height.+Double(easy.priority)
                     new_one.append(ps)
                 }
                 
@@ -315,7 +357,7 @@ public extension UIView{
                                     new_values.append(value)
                                 }
                                 else{
-                                    new_values.append(one_value.&Double(easy.priority))
+                                    new_values.append(one_value.+Double(easy.priority))
                                 }
                             }
                             new_list.append(new_values)
@@ -332,7 +374,7 @@ public extension UIView{
                         }
                         else
                         {
-                            new_list.append([constain.&Double(easy.priority)])
+                            new_list.append([constain.+Double(easy.priority)])
                         }
                     }
                     new_one.append(new_list)
@@ -347,7 +389,7 @@ public extension UIView{
     
     
     @discardableResult
-    class public func eelay<T:UIView>(lays:TP.lays,at:T)->([[NSLayoutConstraint]],[NSLayoutConstraint]) {
+    class func eelay<T:UIView>(lays:TP.lays,at:T)->([[NSLayoutConstraint]],[NSLayoutConstraint]) {
         
         var constrains = [[NSLayoutConstraint]]()
         if lays.count > 0
@@ -488,6 +530,7 @@ public extension UIView{
                         var to_atr = easy.none
                         var this_atr = easy.none
                         
+                        
                         if co_count == 1
                         {
                             to_atr = one_lay[0] as! easy.map
@@ -560,10 +603,29 @@ public extension UIView{
                                         priority = Float("\(_priority)")!
                                     }
                                     
-                                    let x =  NSLayoutConstraint(item: t_view, attribute: lay0.value, relatedBy: relatedBy, toItem: relate_v, attribute: lay1.value, multiplier: 1, constant: value.cg_float)
-                                    x.priority = UILayoutPriority(rawValue:priority)
-                                    one_constains.append(x)
-                                    t_view.superview!.addConstraint(x)
+                                    let item = lay0.constrainTarget(view: t_view)
+                                    let toItem = lay1.constrainTarget(view: relate_v)
+
+                                    
+                                    switch lay0.value {
+                                    case .width,.height:
+                                        var multiplier = value.cg_float
+                                        if multiplier == 0{
+                                            multiplier = 1
+                                        }
+                                        let x =  NSLayoutConstraint(item: item!, attribute: lay0.value, relatedBy: relatedBy, toItem: toItem, attribute: lay1.value, multiplier: multiplier, constant: 0)
+                                            x.priority = UILayoutPriority(rawValue:priority)
+                                            one_constains.append(x)
+                                            t_view.superview!.addConstraint(x)
+                                    default:
+                                        let x =  NSLayoutConstraint(item: item!, attribute: lay0.value, relatedBy: relatedBy, toItem: toItem, attribute: lay1.value, multiplier: 1, constant: value.cg_float)
+                                        
+                                        x.priority = UILayoutPriority(rawValue:priority)
+                                        one_constains.append(x)
+                                        t_view.superview!.addConstraint(x)
+                                    }
+                                    
+                                    
                                 }
                             }
                         }

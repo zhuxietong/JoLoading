@@ -24,8 +24,6 @@ extension NSString:StringValue{
     
 }
 
-
-
 extension Int:NumberValue{ public var doubleValue:Double{get{return Double(self)}}}
 extension UInt:NumberValue{ public var doubleValue:Double{get{return Double(self)}}}
 extension Int32:NumberValue{ public var doubleValue:Double{get{return Double(self)}}}

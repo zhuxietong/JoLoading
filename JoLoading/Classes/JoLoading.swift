@@ -10,28 +10,36 @@ import Foundation
 import UIKit
 import Eelay
 
+extension String{
+    fileprivate var __loc:String{
+        return  NSLocalizedString("\(self)", comment: "")
+    }
+}
+
 
 public extension JoLoading
 {
-    private struct Message{
+    struct Message{
         
-        static var load_failed    = "数据加载是失败请稍候再试"
+        static var load_failed    = "数据加载是失败请稍候再试".__loc
         
-        static var link_failed    = "链接失败请稍候再试"
+        static var link_failed    = "链接失败请稍候再试".__loc
         
         static var app_tag    = ""
+        
+        static var loading_message = "数据加载中".__loc
     }
     
-    public func loading()
+    func loading()
     {
-        self.loading(message: "数据加载中", title: Message.app_tag)
+        self.loading(message: Message.loading_message, title: Message.app_tag)
         
         
     }
     
     
     
-    public func failed()
+    func failed()
     {
         
         self.titleL.textColor = UIColor.darkText
