@@ -23,6 +23,13 @@ class ViewController: UIViewController,LoadingPresenter {
         contentV.backgroundColor = .brown
     }
     
+    var loadingPresenterInset: UIEdgeInsets{
+        get{
+            return UIEdgeInsets(top: 100, left: 120, bottom: 0, right: 0)
+        }
+    }
+    
+    
     @IBAction func start(_ sender: UIBarButtonItem) {
         loadingV.loading()
     }

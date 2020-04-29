@@ -23,6 +23,9 @@ public protocol LoadingPresenter{
     
     var jo_contentView: UIView {get}
     
+    var loadingPresenterInset:UIEdgeInsets{get}
+
+    
 }
 
 private let loadingTag = 18765
@@ -32,6 +35,13 @@ private let contentTag = 18764
 
 public extension LoadingPresenter where Self:UIViewController
 {
+   
+    var loadingPresenterInset:UIEdgeInsets{
+        get{
+               return .zero
+        }
+    }
+    
     
     var LoadingPresenterBg:UIView{get{
         return self.view
@@ -60,8 +70,9 @@ public extension LoadingPresenter where Self:UIViewController
             let loadV = newValue
             loadV.tag = loadingTag
             LoadingPresenterBg.insertSubview(loadV, aboveSubview: jo_contentView)
+            let inset = loadingPresenterInset
             LoadingPresenterBg.eelay = [
-                [loadV,[ee.T.L.B.R]]
+                [loadV,[ee.T.L.B.R,[inset.top,inset.left,-inset.bottom,-inset.right]]]
             ]
             loadV.dismiss(animated: false)
         }
@@ -96,8 +107,10 @@ public extension LoadingPresenter where Self:UIViewController
         
         let loadV = LoadingClass.init()
         self.LoadingPresenterBg.insertSubview(loadV, aboveSubview: contentV)
+        let inset = loadingPresenterInset
+
         LoadingPresenterBg.eelay = [
-            [loadV,[ee.T.L.B.R,[0.+900,0.+900,0.+900,0.+900]]]
+            [loadV,[ee.T.L.B.R,[inset.top.+900,inset.left.+900,-inset.bottom.+900,-inset.right.+900]]]
         ]
         
         loadV.tag = loadingTag
@@ -137,16 +150,18 @@ public extension LoadingPresenter where Self:UIView
             let loadV = newValue
             loadV.tag = loadingTag
             LoadingPresenterBg.insertSubview(loadV, aboveSubview: jo_contentView)
+            let inset = loadingPresenterInset
             LoadingPresenterBg.eelay = [
-                [loadV,[ee.T.L.B.R]]
+                [loadV,[ee.T.L.B.R,[inset.top,inset.left,-inset.bottom,-inset.right]]]
             ]
+         
             loadV.alpha = 0
             
             //            loadV.dismiss(animated: false)
         }
         
     }
-    
+
     var jo_contentView:UIView{
         get{
             
@@ -175,8 +190,9 @@ public extension LoadingPresenter where Self:UIView
         
         let loadV = LoadingClass.init()
         self.LoadingPresenterBg.insertSubview(loadV, aboveSubview: contentV)
+        let inset = loadingPresenterInset
         LoadingPresenterBg.eelay = [
-            [loadV,[ee.T.L.B.R,[0.+900,0.+900,0.+900,0.+900]]]
+            [loadV,[ee.T.L.B.R,[inset.top.+900,inset.left.+900,-inset.bottom.+900,-inset.right.+900]]]
         ]
         
         loadV.tag = loadingTag
