@@ -32,6 +32,16 @@ private let loadingTag = 18765
 private let contentTag = 18764
 
 
+extension UIView{
+    public func viewForTag_(_ tag:Int) -> UIView?{
+        for v in self.subviews {
+            if v.tag == tag{
+                return v
+            }
+        }
+        return nil
+    }
+}
 
 public extension LoadingPresenter where Self:UIViewController
 {
@@ -57,22 +67,22 @@ public extension LoadingPresenter where Self:UIViewController
     var loadingV:JoLoading{
         get{
             
-            if let loadI = self.LoadingPresenterBg.viewWithTag(loadingTag) as? JoLoading
+            if let loadI = self.LoadingPresenterBg.viewForTag_(loadingTag) as? JoLoading
             {
                 return loadI
             }
             createLoadView()
-            let v = self.LoadingPresenterBg.viewWithTag(loadingTag) as! JoLoading
+            let v = self.LoadingPresenterBg.viewForTag_(loadingTag) as! JoLoading
             return v
         }
         set{
-            self.LoadingPresenterBg.viewWithTag(loadingTag)?.removeFromSuperview()
+            self.LoadingPresenterBg.viewForTag_(loadingTag)?.removeFromSuperview()
             let loadV = newValue
             loadV.tag = loadingTag
             LoadingPresenterBg.insertSubview(loadV, aboveSubview: jo_contentView)
             let inset = loadingPresenterInset
             LoadingPresenterBg.eelay = [
-                [loadV,[ee.T.L.B.R,[inset.top,inset.left,-inset.bottom,-inset.right]]]
+                [loadV,[ee.T.L.B.R,[inset.top.+1000,inset.left.+1000,(-inset.bottom).+1000,(-inset.right).+1000]]]
             ]
             loadV.dismiss(animated: false)
         }
@@ -82,19 +92,19 @@ public extension LoadingPresenter where Self:UIViewController
     var jo_contentView:UIView{
         get{
             
-            if let contentV = self.LoadingPresenterBg.viewWithTag(contentTag)
+            if let contentV = self.LoadingPresenterBg.viewForTag_(contentTag)
             {
                 return contentV
             }
             createLoadView()
-            return self.LoadingPresenterBg.viewWithTag(contentTag)!
+            return self.LoadingPresenterBg.viewForTag_(contentTag)!
         }
     }
     
     
     func __insert_jo_contentView(_ contentV:UIView){
         self.LoadingPresenterBg.eelay = [
-            [contentV,[ee.T.L.B.R]],
+            [contentV,[ee.T.L.B.R,[0.+1000,0.+1000,0.+1000,0.+1000]]],
         ]
     }
     
@@ -110,7 +120,7 @@ public extension LoadingPresenter where Self:UIViewController
         let inset = loadingPresenterInset
 
         LoadingPresenterBg.eelay = [
-            [loadV,[ee.T.L.B.R,[inset.top.+900,inset.left.+900,-inset.bottom.+900,-inset.right.+900]]]
+            [loadV,[ee.T.L.B.R,[inset.top.+1000,inset.left.+1000,-inset.bottom.+1000,-inset.right.+1000]]]
         ]
         
         loadV.tag = loadingTag
@@ -137,16 +147,16 @@ public extension LoadingPresenter where Self:UIView
     var loadingV:JoLoading{
         get{
             
-            if let loadI = self.LoadingPresenterBg.viewWithTag(loadingTag) as? JoLoading
+            if let loadI = self.LoadingPresenterBg.viewForTag_(loadingTag) as? JoLoading
             {
                 return loadI
             }
             createLoadView()
-            let v = self.LoadingPresenterBg.viewWithTag(loadingTag) as! JoLoading
+            let v = self.LoadingPresenterBg.viewForTag_(loadingTag) as! JoLoading
             return v
         }
         set{
-            self.LoadingPresenterBg.viewWithTag(loadingTag)?.removeFromSuperview()
+            self.LoadingPresenterBg.viewForTag_(loadingTag)?.removeFromSuperview()
             let loadV = newValue
             loadV.tag = loadingTag
             LoadingPresenterBg.insertSubview(loadV, aboveSubview: jo_contentView)
@@ -192,7 +202,7 @@ public extension LoadingPresenter where Self:UIView
         self.LoadingPresenterBg.insertSubview(loadV, aboveSubview: contentV)
         let inset = loadingPresenterInset
         LoadingPresenterBg.eelay = [
-            [loadV,[ee.T.L.B.R,[inset.top.+900,inset.left.+900,-inset.bottom.+900,-inset.right.+900]]]
+            [loadV,[ee.T.L.B.R,[inset.top.+1000,inset.left.+1000,-inset.bottom.+1000,-inset.right.+1000]]]
         ]
         
         loadV.tag = loadingTag

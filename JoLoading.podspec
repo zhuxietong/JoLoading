@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JoLoading'
-  s.version          = '5.1.1'
+  s.version          = '5.1.2'
   s.summary          = '加载层.'
 
 # This description is used to generate tags and improve search results.
