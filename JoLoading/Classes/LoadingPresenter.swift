@@ -11,7 +11,7 @@ import UIKit
 import Eelay
 
 
-public var LoadingPresenterDefautLoadingClass:JoLoading.Type = JoLoading.self
+public var LoadingPresenterDefautLoadingClass:JoLoading.Type = JoLoadingBase.self
 
 public protocol LoadingPresenter{
     

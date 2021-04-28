@@ -47,7 +47,7 @@ extension UIButton{
     }
 }
 
-extension JoLoading {
+extension JoLoadingBase {
     
     //Appearance
     @objc public dynamic var buttonColor: UIColor {

@@ -17,6 +17,38 @@ extension String{
 }
 
 
+public enum LoadResultType {
+    case _offLine//未能连接到网络
+    case _404//访问不存在
+    case _500(code:String)//服务器错误
+    case _invalidAuth//登录已失效
+    case _needAuth//用户未登录
+    case _timeOut//请求超时
+    case _error(tip:String,tag:String?)//业务层提示
+    case _success(tip:String?)//无错误
+    
+    public var message:String{
+        switch self {
+        case ._offLine:
+            return "未能连接到网络"
+        case ._404:
+            return "访问路径不存在404"
+        case ._500(code: let code):
+            return "服务器错误\(code)"
+        case ._timeOut:
+            return "请求超时"
+        case ._invalidAuth:
+            return "登录已失效"
+        case ._needAuth:
+            return "用户未登录/或登录已失效"
+        case ._error(tip: let tip, tag: _):
+            return tip
+        case ._success(tip:let str):
+            return str ?? "获取数据成功"
+        }
+    }
+}
+
 public extension JoLoading
 {
     struct Message{
@@ -29,32 +61,99 @@ public extension JoLoading
         
         static var loading_message = "数据加载中".__loc
     }
-    
-    func loading()
-    {
-        self.loading(message: Message.loading_message, title: Message.app_tag)
-        
-        
-    }
-    
-    
-    
-    func failed()
-    {
-        
-        self.titleL.textColor = UIColor.darkText
-        
-        self.show(message: Message.app_tag, title: Message.load_failed)
-    }
+   
 }
 
 typealias JoLoading_Hand_Block = (_ handID:String)->()
 
 
-public var DefaultLoading = JoLoading.self
+public var DefaultLoading = JoLoadingBase.self
 
+
+public class _ClickResult{
+    public var block:(_:_ClickResult)->Void
+    public init(_ action:@escaping(_:_ClickResult)->Void) {
+        self.block = action
+    }
+}
 
 open class JoLoading: UIView {
+    
+    public var result:_ClickResult? = nil
+    public var resultClick:_ClickResult? = nil
+    public var taskID:String? = nil
+    public var showing = false
+    public var image:UIImage? = nil{
+        didSet{
+            updateImage()
+        }
+    }
+    open func updateImage(){
+        
+    }
+    
+    open func loading(message:String,title:String){}
+    open func show(message:String,title:String){}
+    open func handle(message:String,title:String,button:String,handAction:@escaping ()->Void){}
+    open func dismiss(animated:Bool=true){}
+    
+    
+    open func alertResult(result:LoadResultType?,handle:_ClickResult?=nil){
+        
+        
+    }
+
+    
+
+    open func loading(){
+        self.loading(message: JoLoading.Message.loading_message, title: JoLoading.Message.app_tag)
+
+    }
+    open func failed(){
+        self.show(message: JoLoading.Message.app_tag, title: JoLoading.Message.load_failed)
+
+    }
+    
+    
+    open func addAnimation()
+    {
+        self.showing = true
+        if self.showing == false
+        {
+            self.alpha = 0.0
+            self.showing = true
+            weak var wself = self
+            UIView.animate(withDuration: 0.2, animations: { () -> Void in
+                wself!.alpha = 1.0
+            }) { (finish:Bool) -> Void in
+            }
+        }
+        else
+        {
+            self.alpha = 1.0
+            self.showing = true
+            
+        }
+    }
+}
+
+
+open class JoLoadingBase: JoLoading {
+    open override func loading()
+    {
+        self.loading(message: JoLoading.Message.loading_message, title: JoLoading.Message.app_tag)
+        
+    }
+    
+    
+    
+    open override func failed()
+    {
+        
+        self.titleL.textColor = UIColor.darkText
+        
+        self.show(message: JoLoading.Message.app_tag, title: JoLoading.Message.load_failed)
+    }
     
     //    var delegate:MELoadingViewDelegate?
     
@@ -84,7 +183,6 @@ open class JoLoading: UIView {
     }()
     
     
-    public var showing = false
     
     
     open var handBlock:()->Void = {
@@ -134,6 +232,7 @@ open class JoLoading: UIView {
         self.addSubview(button)
         
         
+        backgroundColor = .systemBlue
         
         
         let views = ["lable":infoL,"indicator":indicator,"button":button,"imageV":imageV,"titleL":titleL] as [String : Any];
@@ -169,7 +268,8 @@ open class JoLoading: UIView {
         
         self.addConstraint(NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0))
         
-        button.addTarget(self, action: #selector(JoLoading.handle as (JoLoading) -> () -> ()), for: UIControl.Event.touchUpInside)
+        button.addTarget(self, action: #selector(handleAction), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(JoLoading.handle as (JoLoading) -> () -> ()), for: UIControl.Event.touchUpInside)
         button.layer.cornerRadius = 5.0
         button.clipsToBounds = true
         button.tag = 1
@@ -189,34 +289,15 @@ open class JoLoading: UIView {
     }
     
     
-    @objc open func handle()
+    @objc open func handleAction()
     {
         self.handBlock()
     }
     
     
-    private func addAnimation()
-    {
-        self.showing = true
-        if self.showing == false
-        {
-            self.alpha = 0.0
-            self.showing = true
-            weak var wself = self
-            UIView.animate(withDuration: 0.2, animations: { () -> Void in
-                wself!.alpha = 1.0
-            }) { (finish:Bool) -> Void in
-            }
-        }
-        else
-        {
-            self.alpha = 1.0
-            self.showing = true
-            
-        }
-    }
+
     
-    open func loading(message:String,title:String)
+    open override func loading(message:String,title:String)
     {
         self.button.alpha = 0.0
         self.button.isEnabled = false
@@ -234,7 +315,7 @@ open class JoLoading: UIView {
         self.indicator.startAnimating()
     }
     
-    open func show(message:String,title:String)
+    open override func show(message:String,title:String)
     {
         self.button.alpha = 0.0
         self.button.isEnabled = false
@@ -247,7 +328,7 @@ open class JoLoading: UIView {
         self.infoL.text = ("\(message)")
     }
     
-    open func handle(message:String,title:String,button:String,handAction:@escaping ()->Void)
+    open override func handle(message:String,title:String,button:String,handAction:@escaping ()->Void)
     {
         self.handBlock = handAction
         self.addAnimation()
@@ -264,7 +345,7 @@ open class JoLoading: UIView {
         
     }
     
-    open func dismiss(animated:Bool=true)
+    open override func dismiss(animated:Bool=true)
     {
         
         

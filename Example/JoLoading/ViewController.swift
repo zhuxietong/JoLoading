@@ -25,7 +25,7 @@ class ViewController: UIViewController,LoadingPresenter {
     
     var loadingPresenterInset: UIEdgeInsets{
         get{
-            return UIEdgeInsets(top: 100, left: 120, bottom: 0, right: 0)
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
     }
     
@@ -38,7 +38,7 @@ class ViewController: UIViewController,LoadingPresenter {
     }
     @IBAction func faildLoading(_ sender: Any) {
         loadingV.handle(message: "请检查网络", title: "", button: "重试") {
-            print("您点击了重拾")
+            print("您点击了重试")
         }
     }
     
