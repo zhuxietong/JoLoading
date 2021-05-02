@@ -71,15 +71,15 @@ public var DefaultLoading = JoLoadingBase.self
 
 
 public class _ClickResult{
-    public var block:(_:_ClickResult)->Void
-    public init(_ action:@escaping(_:_ClickResult)->Void) {
+    public var block:(_:LoadResultType)->Void
+    public init(_ action:@escaping(_:LoadResultType)->Void) {
         self.block = action
     }
 }
 
 open class JoLoading: UIView {
     
-    public var result:_ClickResult? = nil
+    public var result:LoadResultType? = nil
     public var resultClick:_ClickResult? = nil
     public var taskID:String? = nil
     public var showing = false
