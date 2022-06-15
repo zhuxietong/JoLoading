@@ -25,7 +25,10 @@ public enum LoadResultType {
     case _needAuth//用户未登录
     case _timeOut//请求超时
     case _error(tip:String,tag:String?)//业务层提示
+    case _empty(msg:String?)
+    case _stop(msg:String?)
     case _success(tip:String?)//无错误
+    
     
     public var message:String{
         switch self {
@@ -39,6 +42,10 @@ public enum LoadResultType {
             return "请求超时"
         case ._invalidAuth:
             return "登录已失效"
+        case ._empty(msg: let msg):
+            return msg ?? "没有相关数据"
+        case ._stop(msg: let msg):
+            return msg ?? "禁止操作"
         case ._needAuth:
             return "用户未登录/或登录已失效"
         case ._error(tip: let tip, tag: _):
@@ -81,6 +88,7 @@ open class JoLoading: UIView {
     
     public var result:LoadResultType? = nil
     public var resultClick:_ClickResult? = nil
+
     public var taskID:String? = nil
     public var showing = false
     public var image:UIImage? = nil{
