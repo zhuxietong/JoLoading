@@ -24,6 +24,7 @@ public protocol LoadingPresenter{
     var jo_contentView: UIView {get}
     
     var loadingPresenterInset:UIEdgeInsets{get}
+    var contentPresenterInset:UIEdgeInsets{get}
 
     
 }
@@ -51,6 +52,14 @@ public extension LoadingPresenter where Self:UIViewController
                return .zero
         }
     }
+    
+    var contentPresenterInset:UIEdgeInsets{
+        get{
+               return .zero
+        }
+    }
+    
+    
     
     
     var LoadingPresenterBg:UIView{get{
@@ -103,8 +112,9 @@ public extension LoadingPresenter where Self:UIViewController
     
     
     func __insert_jo_contentView(_ contentV:UIView){
+        let inset = contentPresenterInset
         self.LoadingPresenterBg.eelay = [
-            [contentV,[ee.T.L.B.R,[0.+1000,0.+1000,0.+1000,0.+1000]]],
+            [contentV,[ee.T.L.B.R,[inset.top.+1000,inset.left.+1000,(-inset.bottom).+1000,(-inset.right).+1000]]],
         ]
     }
     
@@ -186,8 +196,9 @@ public extension LoadingPresenter where Self:UIView
     
     
     func __insert_jo_contentView(_ contentV:UIView){
+        let inset = contentPresenterInset
         self.LoadingPresenterBg.eelay = [
-            [contentV,[ee.T.L.B.R]],
+            [contentV,[ee.T.L.B.R,[inset.top.+1000,inset.left.+1000,(-inset.bottom).+1000,(-inset.right).+1000]]],
         ]
     }
     
